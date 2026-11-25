@@ -104,3 +104,13 @@ f381b33934819a8f7bf1348f5209a5783609fe589701aac28e7a6192636fc0cc.
 Python 3.14 with the packages in `requirements.txt`. Training and inference used one NVIDIA RTX 4060 laptop GPU (5 to
 20 minutes per network). The analysis scripts run on a CPU once the predictions are cached. Random draws use the
 seed 42 + 7d for draw d, and bootstrap intervals use 2,000 replicates over subjects (over records on UCI).
+
+## Citation
+
+If you use this code, please cite the paper "Fluctuation-Aware Within-Patient Tracking with Unlabeled Anchoring for
+Calibration-Free Cuffless Blood Pressure Monitoring" (manuscript under review). The full reference will be added
+here after publication.
+
+## Contact
+
+Aryan Ashoori, aryanashoori0@gmail.com, ORCID https://orcid.org/0009-0001-2226-3894
