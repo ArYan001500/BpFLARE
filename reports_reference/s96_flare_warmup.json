@@ -1,0 +1,455 @@
+{
+ "protocol": "s96: FLARE across warm-up lengths M = 1, 3, 5, 6, 10, 20, 60, 120 windows (10 s to 20 min), CalFree.\nFor every M the gate threshold and the ECG weight are re-chosen on the validation subjects with at least M + 20\nwindows (same rules as s93); the absolute network is scored on the same windows. With M = 1 the fluctuation index\nis zero by construction, so every subject falls in the low branch. 50 draws, subject bootstrap 2000. Exploratory.\n",
+ "SBP": {
+  "10s": {
+   "M": 1,
+   "tau": 0.0,
+   "b": 0.0,
+   "n_val_used": 194,
+   "FLARE": [
+    13.238,
+    [
+     12.506,
+     14.031
+    ]
+   ],
+   "no_gate": [
+    13.238,
+    [
+     12.498,
+     14.02
+    ]
+   ],
+   "absolute_same_windows": 12.77,
+   "FLARE_minus_no_gate": [
+    0.0,
+    [
+     0.0,
+     0.0
+    ]
+   ]
+  },
+  "30s": {
+   "M": 3,
+   "tau": 6.488,
+   "b": 0.15,
+   "n_val_used": 194,
+   "FLARE": [
+    11.918,
+    [
+     11.109,
+     12.736
+    ]
+   ],
+   "no_gate": [
+    11.931,
+    [
+     11.118,
+     12.722
+    ]
+   ],
+   "absolute_same_windows": 12.771,
+   "FLARE_minus_no_gate": [
+    -0.013,
+    [
+     -0.03,
+     0.003
+    ]
+   ]
+  },
+  "50s": {
+   "M": 5,
+   "tau": 7.889,
+   "b": 0.1,
+   "n_val_used": 194,
+   "FLARE": [
+    11.62,
+    [
+     10.76,
+     12.451
+    ]
+   ],
+   "no_gate": [
+    11.631,
+    [
+     10.796,
+     12.436
+    ]
+   ],
+   "absolute_same_windows": 12.772,
+   "FLARE_minus_no_gate": [
+    -0.011,
+    [
+     -0.023,
+     0.0
+    ]
+   ]
+  },
+  "60s": {
+   "M": 6,
+   "tau": 8.194,
+   "b": 0.15,
+   "n_val_used": 194,
+   "FLARE": [
+    11.551,
+    [
+     10.734,
+     12.421
+    ]
+   ],
+   "no_gate": [
+    11.566,
+    [
+     10.735,
+     12.436
+    ]
+   ],
+   "absolute_same_windows": 12.772,
+   "FLARE_minus_no_gate": [
+    -0.015,
+    [
+     -0.034,
+     0.004
+    ]
+   ]
+  },
+  "100s": {
+   "M": 10,
+   "tau": 8.989,
+   "b": 0.15,
+   "n_val_used": 194,
+   "FLARE": [
+    11.4,
+    [
+     10.606,
+     12.284
+    ]
+   ],
+   "no_gate": [
+    11.419,
+    [
+     10.585,
+     12.32
+    ]
+   ],
+   "absolute_same_windows": 12.772,
+   "FLARE_minus_no_gate": [
+    -0.019,
+    [
+     -0.04,
+     0.001
+    ]
+   ]
+  },
+  "200s": {
+   "M": 20,
+   "tau": 9.475,
+   "b": 0.2,
+   "n_val_used": 194,
+   "FLARE": [
+    11.28,
+    [
+     10.424,
+     12.178
+    ]
+   ],
+   "no_gate": [
+    11.304,
+    [
+     10.456,
+     12.173
+    ]
+   ],
+   "absolute_same_windows": 12.769,
+   "FLARE_minus_no_gate": [
+    -0.024,
+    [
+     -0.055,
+     0.003
+    ]
+   ]
+  },
+  "600s": {
+   "M": 60,
+   "tau": 9.797,
+   "b": 0.2,
+   "n_val_used": 194,
+   "FLARE": [
+    11.221,
+    [
+     10.315,
+     12.146
+    ]
+   ],
+   "no_gate": [
+    11.249,
+    [
+     10.414,
+     12.104
+    ]
+   ],
+   "absolute_same_windows": 12.764,
+   "FLARE_minus_no_gate": [
+    -0.028,
+    [
+     -0.064,
+     0.005
+    ]
+   ]
+  },
+  "1200s": {
+   "M": 120,
+   "tau": 9.96,
+   "b": 0.15,
+   "n_val_used": 194,
+   "FLARE": [
+    11.192,
+    [
+     10.37,
+     12.073
+    ]
+   ],
+   "no_gate": [
+    11.214,
+    [
+     10.347,
+     12.119
+    ]
+   ],
+   "absolute_same_windows": 12.769,
+   "FLARE_minus_no_gate": [
+    -0.022,
+    [
+     -0.049,
+     0.005
+    ]
+   ]
+  }
+ },
+ "DBP": {
+  "10s": {
+   "M": 1,
+   "tau": 0.0,
+   "b": 0.0,
+   "n_val_used": 194,
+   "FLARE": [
+    8.457,
+    [
+     7.939,
+     9.076
+    ]
+   ],
+   "no_gate": [
+    8.457,
+    [
+     7.914,
+     9.059
+    ]
+   ],
+   "absolute_same_windows": 8.305,
+   "FLARE_minus_no_gate": [
+    0.0,
+    [
+     0.0,
+     0.0
+    ]
+   ]
+  },
+  "30s": {
+   "M": 3,
+   "tau": 3.317,
+   "b": 0.05,
+   "n_val_used": 194,
+   "FLARE": [
+    7.807,
+    [
+     7.227,
+     8.409
+    ]
+   ],
+   "no_gate": [
+    7.812,
+    [
+     7.238,
+     8.409
+    ]
+   ],
+   "absolute_same_windows": 8.305,
+   "FLARE_minus_no_gate": [
+    -0.005,
+    [
+     -0.009,
+     -0.001
+    ]
+   ]
+  },
+  "50s": {
+   "M": 5,
+   "tau": 4.042,
+   "b": 0.3,
+   "n_val_used": 194,
+   "FLARE": [
+    7.652,
+    [
+     7.081,
+     8.309
+    ]
+   ],
+   "no_gate": [
+    7.681,
+    [
+     7.076,
+     8.296
+    ]
+   ],
+   "absolute_same_windows": 8.306,
+   "FLARE_minus_no_gate": [
+    -0.029,
+    [
+     -0.055,
+     -0.003
+    ]
+   ]
+  },
+  "60s": {
+   "M": 6,
+   "tau": 4.203,
+   "b": 0.15,
+   "n_val_used": 194,
+   "FLARE": [
+    7.639,
+    [
+     7.054,
+     8.289
+    ]
+   ],
+   "no_gate": [
+    7.654,
+    [
+     7.064,
+     8.293
+    ]
+   ],
+   "absolute_same_windows": 8.305,
+   "FLARE_minus_no_gate": [
+    -0.016,
+    [
+     -0.03,
+     -0.002
+    ]
+   ]
+  },
+  "100s": {
+   "M": 10,
+   "tau": 4.609,
+   "b": 0.3,
+   "n_val_used": 194,
+   "FLARE": [
+    7.549,
+    [
+     6.908,
+     8.216
+    ]
+   ],
+   "no_gate": [
+    7.583,
+    [
+     6.976,
+     8.21
+    ]
+   ],
+   "absolute_same_windows": 8.305,
+   "FLARE_minus_no_gate": [
+    -0.034,
+    [
+     -0.065,
+     -0.006
+    ]
+   ]
+  },
+  "200s": {
+   "M": 20,
+   "tau": 4.881,
+   "b": 0.15,
+   "n_val_used": 194,
+   "FLARE": [
+    7.513,
+    [
+     6.916,
+     8.136
+    ]
+   ],
+   "no_gate": [
+    7.531,
+    [
+     6.925,
+     8.182
+    ]
+   ],
+   "absolute_same_windows": 8.305,
+   "FLARE_minus_no_gate": [
+    -0.018,
+    [
+     -0.035,
+     -0.002
+    ]
+   ]
+  },
+  "600s": {
+   "M": 60,
+   "tau": 5.038,
+   "b": 0.25,
+   "n_val_used": 194,
+   "FLARE": [
+    7.471,
+    [
+     6.868,
+     8.099
+    ]
+   ],
+   "no_gate": [
+    7.502,
+    [
+     6.894,
+     8.145
+    ]
+   ],
+   "absolute_same_windows": 8.304,
+   "FLARE_minus_no_gate": [
+    -0.031,
+    [
+     -0.061,
+     -0.0
+    ]
+   ]
+  },
+  "1200s": {
+   "M": 120,
+   "tau": 5.119,
+   "b": 0.2,
+   "n_val_used": 194,
+   "FLARE": [
+    7.456,
+    [
+     6.845,
+     8.099
+    ]
+   ],
+   "no_gate": [
+    7.483,
+    [
+     6.876,
+     8.112
+    ]
+   ],
+   "absolute_same_windows": 8.308,
+   "FLARE_minus_no_gate": [
+    -0.027,
+    [
+     -0.054,
+     -0.003
+    ]
+   ]
+  }
+ }
+}

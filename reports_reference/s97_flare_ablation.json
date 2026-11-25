@@ -1,0 +1,205 @@
+{
+ "protocol": "s97: ablation of FLARE on CalFree (exploratory). Every configuration re-chooses its gate threshold and ECG weight\non the validation subjects with the same rules as s93; differences are paired per subject against full FLARE\n(50 draws, subject bootstrap 2000). Positive change = higher error than FLARE.\nRows: full FLARE; no gate and no ECG (two-stage); ECG correction for every subject (no gate); population mean as the\nlevel (gate and ECG kept); mean absolute-network output over the warm-up as the level; absolute network as the\ntracker (same level, gate and ECG); absolute network alone; FLARE anchor alone (no tracking); oracle: true subject\nmean as the level (non-deployable). A gate without the ECG term changes nothing (both branches equal), so it is not\na separate row.\n",
+ "SBP": {
+  "FLARE (full)": {
+   "MAE": 11.28,
+   "change_vs_FLARE": [
+    0.0,
+    [
+     0.0,
+     0.0
+    ]
+   ],
+   "ecg_weight": 0.2
+  },
+  "No gate, no ECG (two-stage)": {
+   "MAE": 11.304,
+   "change_vs_FLARE": [
+    0.024,
+    [
+     -0.004,
+     0.055
+    ]
+   ],
+   "ecg_weight": 0.0
+  },
+  "ECG for every subject, no gate": {
+   "MAE": 11.288,
+   "change_vs_FLARE": [
+    0.008,
+    [
+     -0.008,
+     0.026
+    ]
+   ],
+   "ecg_weight": 0.15
+  },
+  "Population mean as level": {
+   "MAE": 11.924,
+   "change_vs_FLARE": [
+    0.644,
+    [
+     0.234,
+     1.044
+    ]
+   ],
+   "ecg_weight": 0.45
+  },
+  "Mean absolute-network output as level": {
+   "MAE": 11.796,
+   "change_vs_FLARE": [
+    0.516,
+    [
+     -0.021,
+     1.092
+    ]
+   ],
+   "ecg_weight": 0.0
+  },
+  "Absolute network as tracker": {
+   "MAE": 12.289,
+   "change_vs_FLARE": [
+    1.009,
+    [
+     0.8,
+     1.226
+    ]
+   ],
+   "ecg_weight": 0.2
+  },
+  "FLARE anchor alone, no tracking": {
+   "MAE": 14.331,
+   "change_vs_FLARE": [
+    3.051,
+    [
+     2.594,
+     3.504
+    ]
+   ],
+   "ecg_weight": 0.2
+  },
+  "True subject mean as level (oracle)": {
+   "MAE": 7.163,
+   "change_vs_FLARE": [
+    -4.117,
+    [
+     -4.895,
+     -3.368
+    ]
+   ],
+   "ecg_weight": 0.0
+  },
+  "Absolute network alone": {
+   "MAE": 12.769,
+   "change_vs_FLARE": [
+    1.489,
+    [
+     0.893,
+     2.053
+    ]
+   ],
+   "ecg_weight": 0.0
+  }
+ },
+ "DBP": {
+  "FLARE (full)": {
+   "MAE": 7.513,
+   "change_vs_FLARE": [
+    0.0,
+    [
+     0.0,
+     0.0
+    ]
+   ],
+   "ecg_weight": 0.15
+  },
+  "No gate, no ECG (two-stage)": {
+   "MAE": 7.531,
+   "change_vs_FLARE": [
+    0.018,
+    [
+     0.001,
+     0.035
+    ]
+   ],
+   "ecg_weight": 0.0
+  },
+  "ECG for every subject, no gate": {
+   "MAE": 7.484,
+   "change_vs_FLARE": [
+    -0.03,
+    [
+     -0.069,
+     0.01
+    ]
+   ],
+   "ecg_weight": 0.35
+  },
+  "Population mean as level": {
+   "MAE": 8.132,
+   "change_vs_FLARE": [
+    0.619,
+    [
+     0.21,
+     1.025
+    ]
+   ],
+   "ecg_weight": 1.5
+  },
+  "Mean absolute-network output as level": {
+   "MAE": 7.81,
+   "change_vs_FLARE": [
+    0.297,
+    [
+     -0.066,
+     0.64
+    ]
+   ],
+   "ecg_weight": 0.0
+  },
+  "Absolute network as tracker": {
+   "MAE": 8.019,
+   "change_vs_FLARE": [
+    0.506,
+    [
+     0.399,
+     0.61
+    ]
+   ],
+   "ecg_weight": 0.15
+  },
+  "FLARE anchor alone, no tracking": {
+   "MAE": 8.731,
+   "change_vs_FLARE": [
+    1.218,
+    [
+     1.004,
+     1.421
+    ]
+   ],
+   "ecg_weight": 0.15
+  },
+  "True subject mean as level (oracle)": {
+   "MAE": 4.088,
+   "change_vs_FLARE": [
+    -3.425,
+    [
+     -4.085,
+     -2.847
+    ]
+   ],
+   "ecg_weight": 0.0
+  },
+  "Absolute network alone": {
+   "MAE": 8.305,
+   "change_vs_FLARE": [
+    0.791,
+    [
+     0.43,
+     1.138
+    ]
+   ],
+   "ecg_weight": 0.0
+  }
+ }
+}

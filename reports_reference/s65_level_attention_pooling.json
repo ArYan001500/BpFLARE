@@ -1,0 +1,85 @@
+{
+  "analysis_id": "s65_level_attention_pooling",
+  "created_utc": "2026-09-24T09:32:54.251106+00:00",
+  "features": "RAW_w",
+  "n_test_subjects": 144,
+  "draws": 50,
+  "results": {
+    "10": {
+      "mean + ridge": {
+        "SBP": {
+          "pearson_r": 0.3503893768207561,
+          "level_mae": 8.8736026139478,
+          "two_stage_mae": 11.50513406448172
+        },
+        "DBP": {
+          "pearson_r": 0.4532086804353759,
+          "level_mae": 6.438570234680541,
+          "two_stage_mae": 7.694003741525269
+        }
+      },
+      "attention, fit on validation subjects": {
+        "SBP": {
+          "pearson_r": 0.343745818277571,
+          "level_mae": 8.805982069351938,
+          "two_stage_mae": 11.425391384098944
+        },
+        "DBP": {
+          "pearson_r": 0.3621162534245714,
+          "level_mae": 6.612719835548931,
+          "two_stage_mae": 7.884532111530493
+        }
+      },
+      "attention, fit on training subjects": {
+        "SBP": {
+          "pearson_r": 0.31488183529594194,
+          "level_mae": 9.392627263572482,
+          "two_stage_mae": 11.755290460031189
+        },
+        "DBP": {
+          "pearson_r": 0.3908271141278481,
+          "level_mae": 6.723396892245611,
+          "two_stage_mae": 7.887088091513506
+        }
+      }
+    },
+    "20": {
+      "mean + ridge": {
+        "SBP": {
+          "pearson_r": 0.35751465202048766,
+          "level_mae": 8.854681518739577,
+          "two_stage_mae": 11.378471824062517
+        },
+        "DBP": {
+          "pearson_r": 0.461059572058044,
+          "level_mae": 6.424762477342576,
+          "two_stage_mae": 7.648655928975838
+        }
+      },
+      "attention, fit on validation subjects": {
+        "SBP": {
+          "pearson_r": 0.35696953885553484,
+          "level_mae": 8.750893289075957,
+          "two_stage_mae": 11.293382858547272
+        },
+        "DBP": {
+          "pearson_r": 0.37071095332813625,
+          "level_mae": 6.584195590143734,
+          "two_stage_mae": 7.838414444248997
+        }
+      },
+      "attention, fit on training subjects": {
+        "SBP": {
+          "pearson_r": 0.3319976583237564,
+          "level_mae": 9.13217147114542,
+          "two_stage_mae": 11.555001847276074
+        },
+        "DBP": {
+          "pearson_r": 0.4112255230800975,
+          "level_mae": 6.608943659114837,
+          "two_stage_mae": 7.7914383317031355
+        }
+      }
+    }
+  }
+}

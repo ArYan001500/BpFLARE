@@ -1,0 +1,80 @@
+{
+ "protocol": "s107: why does the ECG refinement not help on UCI? Per subject (VitalDB) or record (UCI): the ECG level E (ridge\nfitted on the VitalDB training subjects, medians of the eight window features over all windows of the unit) against\nthe true mean SBP: Pearson r, mean bias of E, and the r of the correction direction (E - mean E) with the error of the\nstage-1 level (true mean - L), which is what the refinement needs. Also the feature distributions (median) per cohort,\nto see a shift in acquisition. Descriptive.",
+ "feature_names": [
+  "HR",
+  "RMSSD",
+  "RR_SD",
+  "PAT_peak",
+  "PAT_foot",
+  "R_width",
+  "T_to_R",
+  "PPG_interval"
+ ],
+ "train_feature_median": [
+  82.428,
+  0.014,
+  0.012,
+  0.558,
+  0.668,
+  0.04,
+  0.289,
+  0.84
+ ],
+ "VitalDB CalFree": {
+  "n_units": 144,
+  "r_E_true": 0.151,
+  "r_L_true": 0.366,
+  "r_correction_with_level_error": 0.107,
+  "bias_E": 0.14,
+  "true_mean_SBP": 115.4,
+  "true_SD_of_unit_means": 11.8,
+  "feature_median": [
+   84.867,
+   0.012,
+   0.009,
+   0.552,
+   0.66,
+   0.036,
+   0.282,
+   0.841
+  ]
+ },
+ "VitalDB AAMI": {
+  "n_units": 108,
+  "r_E_true": 0.199,
+  "r_L_true": 0.424,
+  "r_correction_with_level_error": 0.141,
+  "bias_E": -0.21,
+  "true_mean_SBP": 116.1,
+  "true_SD_of_unit_means": 11.0,
+  "feature_median": [
+   79.787,
+   0.012,
+   0.011,
+   0.574,
+   0.686,
+   0.032,
+   0.285,
+   0.826
+  ]
+ },
+ "UCI": {
+  "n_units": 4120,
+  "r_E_true": 0.07,
+  "r_L_true": 0.271,
+  "r_correction_with_level_error": 0.084,
+  "bias_E": -15.26,
+  "true_mean_SBP": 129.7,
+  "true_SD_of_unit_means": 21.0,
+  "feature_median": [
+   91.463,
+   0.011,
+   0.009,
+   0.592,
+   0.544,
+   0.032,
+   0.167,
+   0.672
+  ]
+ }
+}

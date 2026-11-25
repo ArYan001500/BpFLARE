@@ -1,0 +1,25 @@
+{
+  "analysis_id": "s37_backbones",
+  "created_utc": "2026-11-18T20:22:20.084959+00:00",
+  "results": {
+    "BB_MODERNTCN_PAIRED": {
+      "tag": "BB_MODERNTCN_PAIRED",
+      "backbone": "MODERNTCN",
+      "objective": "PAIRED",
+      "parameters": 409411,
+      "seed": 42,
+      "best_at_epoch": 5.750161812297734,
+      "minutes": 22.87368525333392,
+      "tracked": {
+        "SBP": {
+          "tracked_mae": 7.823822487372433,
+          "within_r": 0.6698752359794578
+        },
+        "DBP": {
+          "tracked_mae": 4.392345035629164,
+          "within_r": 0.6313325637962445
+        }
+      }
+    }
+  }
+}

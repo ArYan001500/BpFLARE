@@ -1,0 +1,95 @@
+{
+ "protocol": "s101: label-free fluctuation index in deployable form. For each subject and draw d (seed 42 + 7d, 50 draws),\n20 random warm-up windows; index = SD of the model output over those windows. Pearson r across subjects between the\nindex (one draw at a time, then r averaged over draws; also the index averaged over draws) and the true SD of the\nreference over all windows of the subject. Pairwise tracker vs absolute network, ResNet seed 42. Subjects >= 40 windows.\n",
+ "calfree": {
+  "WS_PAIRED": {
+   "SBP": {
+    "n_subjects": 144,
+    "r_single_draw_mean": 0.572,
+    "r_single_draw_range": [
+     0.47,
+     0.648
+    ],
+    "r_index_averaged_over_draws": 0.675,
+    "median_index_over_true_sd": 0.74
+   },
+   "DBP": {
+    "n_subjects": 144,
+    "r_single_draw_mean": 0.586,
+    "r_single_draw_range": [
+     0.505,
+     0.668
+    ],
+    "r_index_averaged_over_draws": 0.691,
+    "median_index_over_true_sd": 0.69
+   }
+  },
+  "WS_ABS": {
+   "SBP": {
+    "n_subjects": 144,
+    "r_single_draw_mean": 0.348,
+    "r_single_draw_range": [
+     0.208,
+     0.421
+    ],
+    "r_index_averaged_over_draws": 0.403,
+    "median_index_over_true_sd": 0.62
+   },
+   "DBP": {
+    "n_subjects": 144,
+    "r_single_draw_mean": 0.448,
+    "r_single_draw_range": [
+     0.319,
+     0.535
+    ],
+    "r_index_averaged_over_draws": 0.529,
+    "median_index_over_true_sd": 0.62
+   }
+  }
+ },
+ "aami": {
+  "WS_PAIRED": {
+   "SBP": {
+    "n_subjects": 108,
+    "r_single_draw_mean": 0.564,
+    "r_single_draw_range": [
+     0.459,
+     0.62
+    ],
+    "r_index_averaged_over_draws": 0.668,
+    "median_index_over_true_sd": 0.75
+   },
+   "DBP": {
+    "n_subjects": 108,
+    "r_single_draw_mean": 0.488,
+    "r_single_draw_range": [
+     0.394,
+     0.579
+    ],
+    "r_index_averaged_over_draws": 0.582,
+    "median_index_over_true_sd": 0.68
+   }
+  },
+  "WS_ABS": {
+   "SBP": {
+    "n_subjects": 108,
+    "r_single_draw_mean": 0.454,
+    "r_single_draw_range": [
+     0.355,
+     0.535
+    ],
+    "r_index_averaged_over_draws": 0.521,
+    "median_index_over_true_sd": 0.6
+   },
+   "DBP": {
+    "n_subjects": 108,
+    "r_single_draw_mean": 0.444,
+    "r_single_draw_range": [
+     0.329,
+     0.529
+    ],
+    "r_index_averaged_over_draws": 0.518,
+    "median_index_over_true_sd": 0.59
+   }
+  }
+ }
+}

@@ -1,0 +1,645 @@
+{
+ "protocol": "s94: FLARE (s93) for further tracker seeds and for a PPG-only system.\n\nVariants\n  seed 42 (reference), 44, 45 : WS_PAIRED_s{seed} tracker, WS_ABS_s{seed} comparator, stage-1 level from RAW_w\n                                features; gate threshold and ECG weight refitted on validation for each seed.\n  seed 43                     : only saved test predictions exist (no weights), so validation outputs cannot be\n                                computed; threshold and ECG weight are taken from seed 42 (reported separately).\n  PPG-only                    : tracker WS_PAIRED_ppgonly and comparator WS_ABS_ppgonly (ECG zeroed in training and\n                                inference), level from the WS_ABS_ppgonly encoder; no ECG exists, so the low branch\n                                has no ECG correction (gate only).\nProtocol as in s93 (20 random warm-up windows, 50 draws, subject bootstrap 2000). CalFree is exploratory; AAMI\n(seeds 44/45) has not been used to fit or choose anything.\n",
+ "seed_42": {
+  "SBP": {
+   "tau": 9.475,
+   "b": 0.2,
+   "calfree": {
+    "FLARE": [
+     11.28,
+     [
+      10.449,
+      12.171
+     ]
+    ],
+    "no_gate": [
+     11.304,
+     [
+      10.464,
+      12.183
+     ]
+    ],
+    "FLARE_minus_no_gate": [
+     -0.024,
+     [
+      -0.054,
+      0.004
+     ]
+    ],
+    "absolute": [
+     12.769,
+     [
+      11.855,
+      13.714
+     ]
+    ],
+    "FLARE_minus_absolute": [
+     -1.489,
+     [
+      -2.075,
+      -0.936
+     ]
+    ]
+   },
+   "aami": {
+    "FLARE": [
+     11.392,
+     [
+      10.452,
+      12.328
+     ]
+    ],
+    "no_gate": [
+     11.421,
+     [
+      10.539,
+      12.377
+     ]
+    ],
+    "FLARE_minus_no_gate": [
+     -0.029,
+     [
+      -0.055,
+      -0.002
+     ]
+    ],
+    "absolute": [
+     12.652,
+     [
+      11.672,
+      13.655
+     ]
+    ],
+    "FLARE_minus_absolute": [
+     -1.261,
+     [
+      -1.992,
+      -0.564
+     ]
+    ]
+   }
+  },
+  "DBP": {
+   "tau": 4.881,
+   "b": 0.15,
+   "calfree": {
+    "FLARE": [
+     7.513,
+     [
+      6.909,
+      8.181
+     ]
+    ],
+    "no_gate": [
+     7.531,
+     [
+      6.912,
+      8.16
+     ]
+    ],
+    "FLARE_minus_no_gate": [
+     -0.018,
+     [
+      -0.036,
+      -0.001
+     ]
+    ],
+    "absolute": [
+     8.305,
+     [
+      7.608,
+      9.017
+     ]
+    ],
+    "FLARE_minus_absolute": [
+     -0.791,
+     [
+      -1.153,
+      -0.418
+     ]
+    ]
+   },
+   "aami": {
+    "FLARE": [
+     7.905,
+     [
+      7.193,
+      8.648
+     ]
+    ],
+    "no_gate": [
+     7.906,
+     [
+      7.166,
+      8.706
+     ]
+    ],
+    "FLARE_minus_no_gate": [
+     -0.001,
+     [
+      -0.011,
+      0.01
+     ]
+    ],
+    "absolute": [
+     8.376,
+     [
+      7.686,
+      9.123
+     ]
+    ],
+    "FLARE_minus_absolute": [
+     -0.471,
+     [
+      -0.87,
+      -0.039
+     ]
+    ]
+   }
+  }
+ },
+ "seed_44": {
+  "SBP": {
+   "tau": 9.306,
+   "b": 0.15,
+   "calfree": {
+    "FLARE": [
+     11.38,
+     [
+      10.48,
+      12.316
+     ]
+    ],
+    "no_gate": [
+     11.395,
+     [
+      10.55,
+      12.298
+     ]
+    ],
+    "FLARE_minus_no_gate": [
+     -0.015,
+     [
+      -0.039,
+      0.006
+     ]
+    ],
+    "absolute": [
+     12.895,
+     [
+      11.896,
+      13.943
+     ]
+    ],
+    "FLARE_minus_absolute": [
+     -1.516,
+     [
+      -2.071,
+      -0.963
+     ]
+    ]
+   },
+   "aami": {
+    "FLARE": [
+     11.389,
+     [
+      10.456,
+      12.299
+     ]
+    ],
+    "no_gate": [
+     11.412,
+     [
+      10.5,
+      12.332
+     ]
+    ],
+    "FLARE_minus_no_gate": [
+     -0.023,
+     [
+      -0.043,
+      -0.003
+     ]
+    ],
+    "absolute": [
+     12.872,
+     [
+      11.869,
+      13.991
+     ]
+    ],
+    "FLARE_minus_absolute": [
+     -1.483,
+     [
+      -2.236,
+      -0.78
+     ]
+    ]
+   }
+  },
+  "DBP": {
+   "tau": 4.735,
+   "b": 0.75,
+   "calfree": {
+    "FLARE": [
+     7.489,
+     [
+      6.883,
+      8.136
+     ]
+    ],
+    "no_gate": [
+     7.545,
+     [
+      6.925,
+      8.175
+     ]
+    ],
+    "FLARE_minus_no_gate": [
+     -0.056,
+     [
+      -0.134,
+      0.021
+     ]
+    ],
+    "absolute": [
+     8.641,
+     [
+      7.961,
+      9.344
+     ]
+    ],
+    "FLARE_minus_absolute": [
+     -1.152,
+     [
+      -1.552,
+      -0.734
+     ]
+    ]
+   },
+   "aami": {
+    "FLARE": [
+     7.927,
+     [
+      7.183,
+      8.729
+     ]
+    ],
+    "no_gate": [
+     7.894,
+     [
+      7.183,
+      8.648
+     ]
+    ],
+    "FLARE_minus_no_gate": [
+     0.033,
+     [
+      -0.031,
+      0.109
+     ]
+    ],
+    "absolute": [
+     8.418,
+     [
+      7.677,
+      9.194
+     ]
+    ],
+    "FLARE_minus_absolute": [
+     -0.491,
+     [
+      -0.954,
+      -0.032
+     ]
+    ]
+   }
+  }
+ },
+ "seed_45": {
+  "SBP": {
+   "tau": 8.825,
+   "b": 0.2,
+   "calfree": {
+    "FLARE": [
+     11.385,
+     [
+      10.539,
+      12.236
+     ]
+    ],
+    "no_gate": [
+     11.413,
+     [
+      10.557,
+      12.276
+     ]
+    ],
+    "FLARE_minus_no_gate": [
+     -0.028,
+     [
+      -0.059,
+      0.001
+     ]
+    ],
+    "absolute": [
+     12.85,
+     [
+      11.907,
+      13.792
+     ]
+    ],
+    "FLARE_minus_absolute": [
+     -1.465,
+     [
+      -2.221,
+      -0.738
+     ]
+    ]
+   },
+   "aami": {
+    "FLARE": [
+     11.404,
+     [
+      10.516,
+      12.318
+     ]
+    ],
+    "no_gate": [
+     11.435,
+     [
+      10.52,
+      12.369
+     ]
+    ],
+    "FLARE_minus_no_gate": [
+     -0.031,
+     [
+      -0.058,
+      -0.005
+     ]
+    ],
+    "absolute": [
+     13.334,
+     [
+      12.166,
+      14.514
+     ]
+    ],
+    "FLARE_minus_absolute": [
+     -1.93,
+     [
+      -2.894,
+      -1.049
+     ]
+    ]
+   }
+  },
+  "DBP": {
+   "tau": 4.639,
+   "b": 0.1,
+   "calfree": {
+    "FLARE": [
+     7.539,
+     [
+      6.942,
+      8.158
+     ]
+    ],
+    "no_gate": [
+     7.549,
+     [
+      6.937,
+      8.19
+     ]
+    ],
+    "FLARE_minus_no_gate": [
+     -0.01,
+     [
+      -0.021,
+      0.001
+     ]
+    ],
+    "absolute": [
+     8.577,
+     [
+      7.849,
+      9.314
+     ]
+    ],
+    "FLARE_minus_absolute": [
+     -1.038,
+     [
+      -1.421,
+      -0.649
+     ]
+    ]
+   },
+   "aami": {
+    "FLARE": [
+     7.904,
+     [
+      7.201,
+      8.651
+     ]
+    ],
+    "no_gate": [
+     7.902,
+     [
+      7.16,
+      8.704
+     ]
+    ],
+    "FLARE_minus_no_gate": [
+     0.002,
+     [
+      -0.007,
+      0.011
+     ]
+    ],
+    "absolute": [
+     8.765,
+     [
+      7.982,
+      9.638
+     ]
+    ],
+    "FLARE_minus_absolute": [
+     -0.861,
+     [
+      -1.36,
+      -0.348
+     ]
+    ]
+   }
+  }
+ },
+ "seed_43_threshold_from_seed42": {
+  "SBP": {
+   "tau": 9.475,
+   "b": 0.2,
+   "calfree": {
+    "FLARE": [
+     11.287,
+     [
+      10.479,
+      12.161
+     ]
+    ],
+    "no_gate": [
+     11.311,
+     [
+      10.505,
+      12.233
+     ]
+    ],
+    "FLARE_minus_no_gate": [
+     -0.024,
+     [
+      -0.057,
+      0.007
+     ]
+    ],
+    "absolute": [
+     12.626,
+     [
+      11.718,
+      13.533
+     ]
+    ],
+    "FLARE_minus_absolute": [
+     -1.34,
+     [
+      -1.904,
+      -0.771
+     ]
+    ]
+   }
+  },
+  "DBP": {
+   "tau": 4.881,
+   "b": 0.15,
+   "calfree": {
+    "FLARE": [
+     7.518,
+     [
+      6.916,
+      8.137
+     ]
+    ],
+    "no_gate": [
+     7.535,
+     [
+      6.936,
+      8.145
+     ]
+    ],
+    "FLARE_minus_no_gate": [
+     -0.017,
+     [
+      -0.035,
+      0.0
+     ]
+    ],
+    "absolute": [
+     8.376,
+     [
+      7.726,
+      9.048
+     ]
+    ],
+    "FLARE_minus_absolute": [
+     -0.857,
+     [
+      -1.2,
+      -0.489
+     ]
+    ]
+   }
+  }
+ },
+ "ppg_only": {
+  "SBP": {
+   "tau": 8.828,
+   "b": 0.0,
+   "calfree": {
+    "FLARE": [
+     11.448,
+     [
+      10.652,
+      12.259
+     ]
+    ],
+    "no_gate": [
+     11.448,
+     [
+      10.693,
+      12.317
+     ]
+    ],
+    "FLARE_minus_no_gate": [
+     0.0,
+     [
+      0.0,
+      0.0
+     ]
+    ],
+    "absolute": [
+     12.744,
+     [
+      11.754,
+      13.71
+     ]
+    ],
+    "FLARE_minus_absolute": [
+     -1.296,
+     [
+      -2.006,
+      -0.583
+     ]
+    ]
+   }
+  },
+  "DBP": {
+   "tau": 4.657,
+   "b": 0.0,
+   "calfree": {
+    "FLARE": [
+     7.526,
+     [
+      6.941,
+      8.137
+     ]
+    ],
+    "no_gate": [
+     7.526,
+     [
+      6.95,
+      8.168
+     ]
+    ],
+    "FLARE_minus_no_gate": [
+     0.0,
+     [
+      0.0,
+      0.0
+     ]
+    ],
+    "absolute": [
+     8.029,
+     [
+      7.377,
+      8.758
+     ]
+    ],
+    "FLARE_minus_absolute": [
+     -0.504,
+     [
+      -0.928,
+      -0.087
+     ]
+    ]
+   }
+  }
+ }
+}

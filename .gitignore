@@ -1,0 +1,11 @@
+AllDataSet/
+data/uci/
+converted/
+cache/
+external/ModernTCN/
+__pycache__/
+*.pyc
+runs/s93/
+runs/fig*/
+results/
+reports/

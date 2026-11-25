@@ -1,0 +1,345 @@
+{
+  "analysis_id": "s68_level_ensemble",
+  "created_utc": "2026-09-26T07:45:08.615212+00:00",
+  "components": [
+    "ridge(RAW_w)",
+    "ridge(WS_PAIRED)",
+    "absmean(RAW_w)",
+    "absmean(WS_ABS)",
+    "absmean(BB_INCEPTION_ABS)",
+    "absmean(BB_TCN_ABS)"
+  ],
+  "paired_models": [
+    "WS_PAIRED",
+    "WS_PAIRED_s43",
+    "BB_INCEPTION_PAIRED",
+    "BB_TCN_PAIRED"
+  ],
+  "draws": 50,
+  "results": {
+    "1": {
+      "SBP": {
+        "best single (ridge RAW_w) + WS_PAIRED": {
+          "level_mae": 9.176928532020966,
+          "two_stage_mae": 13.237867212306735
+        },
+        "best single (ridge RAW_w) + ENSEMBLE": {
+          "level_mae": 9.176928532020966,
+          "two_stage_mae": 13.069141282554943
+        },
+        "simple average of all six + WS_PAIRED": {
+          "level_mae": 10.598808390859084,
+          "two_stage_mae": 12.46131719275318
+        },
+        "simple average of all six + ENSEMBLE": {
+          "level_mae": 10.598808390859084,
+          "two_stage_mae": 12.2624097755556
+        },
+        "stacked, weights fitted on validation + WS_PAIRED": {
+          "level_mae": 9.078682339804738,
+          "two_stage_mae": 13.43927804324833
+        },
+        "stacked, weights fitted on validation + ENSEMBLE": {
+          "level_mae": 9.078682339804738,
+          "two_stage_mae": 13.282364624144389
+        }
+      },
+      "DBP": {
+        "best single (ridge RAW_w) + WS_PAIRED": {
+          "level_mae": 6.641895392763757,
+          "two_stage_mae": 8.45720869671682
+        },
+        "best single (ridge RAW_w) + ENSEMBLE": {
+          "level_mae": 6.641895392763757,
+          "two_stage_mae": 8.400188973068294
+        },
+        "simple average of all six + WS_PAIRED": {
+          "level_mae": 7.175266139368389,
+          "two_stage_mae": 8.107255499421562
+        },
+        "simple average of all six + ENSEMBLE": {
+          "level_mae": 7.175266139368389,
+          "two_stage_mae": 8.047939469162435
+        },
+        "stacked, weights fitted on validation + WS_PAIRED": {
+          "level_mae": 6.733834957757613,
+          "two_stage_mae": 8.759710978582591
+        },
+        "stacked, weights fitted on validation + ENSEMBLE": {
+          "level_mae": 6.733834957757613,
+          "two_stage_mae": 8.712306310685246
+        }
+      }
+    },
+    "5": {
+      "SBP": {
+        "best single (ridge RAW_w) + WS_PAIRED": {
+          "level_mae": 8.823293488034267,
+          "two_stage_mae": 11.630690612069948
+        },
+        "best single (ridge RAW_w) + ENSEMBLE": {
+          "level_mae": 8.823293488034267,
+          "two_stage_mae": 11.513868038569463
+        },
+        "simple average of all six + WS_PAIRED": {
+          "level_mae": 9.245593026737287,
+          "two_stage_mae": 11.578771830076063
+        },
+        "simple average of all six + ENSEMBLE": {
+          "level_mae": 9.245593026737287,
+          "two_stage_mae": 11.44330575403091
+        },
+        "stacked, weights fitted on validation + WS_PAIRED": {
+          "level_mae": 8.973409429897684,
+          "two_stage_mae": 11.689528599879191
+        },
+        "stacked, weights fitted on validation + ENSEMBLE": {
+          "level_mae": 8.973409429897684,
+          "two_stage_mae": 11.574023604845163
+        }
+      },
+      "DBP": {
+        "best single (ridge RAW_w) + WS_PAIRED": {
+          "level_mae": 6.334933303140101,
+          "two_stage_mae": 7.680544601349232
+        },
+        "best single (ridge RAW_w) + ENSEMBLE": {
+          "level_mae": 6.334933303140101,
+          "two_stage_mae": 7.642078616231706
+        },
+        "simple average of all six + WS_PAIRED": {
+          "level_mae": 6.556717884446696,
+          "two_stage_mae": 7.714572205238578
+        },
+        "simple average of all six + ENSEMBLE": {
+          "level_mae": 6.556717884446696,
+          "two_stage_mae": 7.674696889861609
+        },
+        "stacked, weights fitted on validation + WS_PAIRED": {
+          "level_mae": 6.760967924603009,
+          "two_stage_mae": 8.051024730558588
+        },
+        "stacked, weights fitted on validation + ENSEMBLE": {
+          "level_mae": 6.760967924603009,
+          "two_stage_mae": 8.02838069698479
+        }
+      }
+    },
+    "10": {
+      "SBP": {
+        "best single (ridge RAW_w) + WS_PAIRED": {
+          "level_mae": 8.7717687429221,
+          "two_stage_mae": 11.419294972907748
+        },
+        "best single (ridge RAW_w) + ENSEMBLE": {
+          "level_mae": 8.7717687429221,
+          "two_stage_mae": 11.30663016981435
+        },
+        "simple average of all six + WS_PAIRED": {
+          "level_mae": 8.999646945550582,
+          "two_stage_mae": 11.473779962963484
+        },
+        "simple average of all six + ENSEMBLE": {
+          "level_mae": 8.999646945550582,
+          "two_stage_mae": 11.350949070330797
+        },
+        "stacked, weights fitted on validation + WS_PAIRED": {
+          "level_mae": 8.973097261739003,
+          "two_stage_mae": 11.546625755456432
+        },
+        "stacked, weights fitted on validation + ENSEMBLE": {
+          "level_mae": 8.973097261739003,
+          "two_stage_mae": 11.43553408589103
+        }
+      },
+      "DBP": {
+        "best single (ridge RAW_w) + WS_PAIRED": {
+          "level_mae": 6.307607283053203,
+          "two_stage_mae": 7.583033778261109
+        },
+        "best single (ridge RAW_w) + ENSEMBLE": {
+          "level_mae": 6.307607283053203,
+          "two_stage_mae": 7.5448999475581315
+        },
+        "simple average of all six + WS_PAIRED": {
+          "level_mae": 6.483413997756953,
+          "two_stage_mae": 7.6630112697430475
+        },
+        "simple average of all six + ENSEMBLE": {
+          "level_mae": 6.483413997756953,
+          "two_stage_mae": 7.626261348044571
+        },
+        "stacked, weights fitted on validation + WS_PAIRED": {
+          "level_mae": 6.8388818259409625,
+          "two_stage_mae": 8.044467897409737
+        },
+        "stacked, weights fitted on validation + ENSEMBLE": {
+          "level_mae": 6.8388818259409625,
+          "two_stage_mae": 8.018461077017243
+        }
+      }
+    },
+    "20": {
+      "SBP": {
+        "best single (ridge RAW_w) + WS_PAIRED": {
+          "level_mae": 8.742927288587014,
+          "two_stage_mae": 11.304048362536609
+        },
+        "best single (ridge RAW_w) + ENSEMBLE": {
+          "level_mae": 8.742927288587014,
+          "two_stage_mae": 11.201171968962132
+        },
+        "simple average of all six + WS_PAIRED": {
+          "level_mae": 8.892263262855739,
+          "two_stage_mae": 11.429328549200411
+        },
+        "simple average of all six + ENSEMBLE": {
+          "level_mae": 8.892263262855739,
+          "two_stage_mae": 11.31351215035016
+        },
+        "stacked, weights fitted on validation + WS_PAIRED": {
+          "level_mae": 9.023913040149148,
+          "two_stage_mae": 11.516565471819963
+        },
+        "stacked, weights fitted on validation + ENSEMBLE": {
+          "level_mae": 9.023913040149148,
+          "two_stage_mae": 11.408010195946808
+        }
+      },
+      "DBP": {
+        "best single (ridge RAW_w) + WS_PAIRED": {
+          "level_mae": 6.287684382846917,
+          "two_stage_mae": 7.531103628690898
+        },
+        "best single (ridge RAW_w) + ENSEMBLE": {
+          "level_mae": 6.287684382846917,
+          "two_stage_mae": 7.495781448988562
+        },
+        "simple average of all six + WS_PAIRED": {
+          "level_mae": 6.438816488502293,
+          "two_stage_mae": 7.641840219929851
+        },
+        "simple average of all six + ENSEMBLE": {
+          "level_mae": 6.438816488502293,
+          "two_stage_mae": 7.606713002289051
+        },
+        "stacked, weights fitted on validation + WS_PAIRED": {
+          "level_mae": 6.867278653142004,
+          "two_stage_mae": 8.071311361373027
+        },
+        "stacked, weights fitted on validation + ENSEMBLE": {
+          "level_mae": 6.867278653142004,
+          "two_stage_mae": 8.042811922819405
+        }
+      }
+    },
+    "60": {
+      "SBP": {
+        "best single (ridge RAW_w) + WS_PAIRED": {
+          "level_mae": 8.71067505491682,
+          "two_stage_mae": 11.24880459538831
+        },
+        "best single (ridge RAW_w) + ENSEMBLE": {
+          "level_mae": 8.71067505491682,
+          "two_stage_mae": 11.150505842811935
+        },
+        "simple average of all six + WS_PAIRED": {
+          "level_mae": 8.794712923691625,
+          "two_stage_mae": 11.396816644780904
+        },
+        "simple average of all six + ENSEMBLE": {
+          "level_mae": 8.794712923691625,
+          "two_stage_mae": 11.284574386815267
+        },
+        "stacked, weights fitted on validation + WS_PAIRED": {
+          "level_mae": 8.978058152154953,
+          "two_stage_mae": 11.454143728652054
+        },
+        "stacked, weights fitted on validation + ENSEMBLE": {
+          "level_mae": 8.978058152154953,
+          "two_stage_mae": 11.348892916470195
+        }
+      },
+      "DBP": {
+        "best single (ridge RAW_w) + WS_PAIRED": {
+          "level_mae": 6.2729440064332795,
+          "two_stage_mae": 7.5020934280557805
+        },
+        "best single (ridge RAW_w) + ENSEMBLE": {
+          "level_mae": 6.2729440064332795,
+          "two_stage_mae": 7.465644312165519
+        },
+        "simple average of all six + WS_PAIRED": {
+          "level_mae": 6.400414346926707,
+          "two_stage_mae": 7.625722862739526
+        },
+        "simple average of all six + ENSEMBLE": {
+          "level_mae": 6.400414346926707,
+          "two_stage_mae": 7.5905277233579005
+        },
+        "stacked, weights fitted on validation + WS_PAIRED": {
+          "level_mae": 6.869010529165337,
+          "two_stage_mae": 8.071561888394472
+        },
+        "stacked, weights fitted on validation + ENSEMBLE": {
+          "level_mae": 6.869010529165337,
+          "two_stage_mae": 8.037997662853547
+        }
+      }
+    },
+    "120": {
+      "SBP": {
+        "best single (ridge RAW_w) + WS_PAIRED": {
+          "level_mae": 8.719222159898452,
+          "two_stage_mae": 11.214360113502725
+        },
+        "best single (ridge RAW_w) + ENSEMBLE": {
+          "level_mae": 8.719222159898452,
+          "two_stage_mae": 11.11412239810804
+        },
+        "simple average of all six + WS_PAIRED": {
+          "level_mae": 8.805867224875099,
+          "two_stage_mae": 11.380243425186823
+        },
+        "simple average of all six + ENSEMBLE": {
+          "level_mae": 8.805867224875099,
+          "two_stage_mae": 11.265908273857255
+        },
+        "stacked, weights fitted on validation + WS_PAIRED": {
+          "level_mae": 8.984931827033325,
+          "two_stage_mae": 11.426570922202593
+        },
+        "stacked, weights fitted on validation + ENSEMBLE": {
+          "level_mae": 8.984931827033325,
+          "two_stage_mae": 11.318660101066468
+        }
+      },
+      "DBP": {
+        "best single (ridge RAW_w) + WS_PAIRED": {
+          "level_mae": 6.275236182827704,
+          "two_stage_mae": 7.483015130869753
+        },
+        "best single (ridge RAW_w) + ENSEMBLE": {
+          "level_mae": 6.275236182827704,
+          "two_stage_mae": 7.4464332528224775
+        },
+        "simple average of all six + WS_PAIRED": {
+          "level_mae": 6.406551329678044,
+          "two_stage_mae": 7.617032084988371
+        },
+        "simple average of all six + ENSEMBLE": {
+          "level_mae": 6.406551329678044,
+          "two_stage_mae": 7.581629696021043
+        },
+        "stacked, weights fitted on validation + WS_PAIRED": {
+          "level_mae": 6.895823563645404,
+          "two_stage_mae": 8.092444217962226
+        },
+        "stacked, weights fitted on validation + ENSEMBLE": {
+          "level_mae": 6.895823563645404,
+          "two_stage_mae": 8.05637257850145
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,287 @@
+{
+ "protocol": "s93: fluctuation-gated two-stage system with an ECG-corrected anchor in the low-fluctuation branch.\n\nEverything a deployed system would do, per subject and per warm-up draw (20 randomly sampled unlabeled 10-s windows,\n50 draws, seed 42 + 7 d, warm-up windows excluded from scoring):\n  1. Fluctuation index v = SD of the pairwise tracker output (WS_PAIRED) over the warm-up windows.\n  2. Gate: v <= tau -> low-fluctuation branch, else high-fluctuation branch. tau = median of v over the validation\n     subject-draws.\n  3. Anchor: L = mean over the warm-up of the stage-1 ridge score (frozen RAW_w encoder features, ridge fitted on the\n     194 validation subjects; out-of-fold for validation subjects). High branch: anchor = L. Low branch:\n     anchor = L + b * (E - mean E), where E is a ridge level from 8 hand-crafted ECG features (median over the\n     warm-up windows) fitted on the 1,099 training subjects, and b is chosen on the low-branch validation\n     subject-draws (grid 0..1.5) and then frozen.\n  4. Output for every scored window x: anchor + f(x) - mean of f over the warm-up.\nFitting: networks on the training subjects (already trained), ridge rules and b on validation, ECG ridge on\ntraining. Evaluation only: CalFree (144 subjects, exploratory: used during development) and the AAMI subjects\n(108 with >= 40 windows; not used to fit or choose anything). Reference: the current two-stage system on the same\nwindows and draws. Intervals: 2000 subject-level bootstrap replicates of paired per-subject differences.\n",
+ "n_subjects": {
+  "val": 194,
+  "calfree": 144,
+  "aami": 108
+ },
+ "n_training_subjects_ecg": 1099,
+ "SBP": {
+  "tau": 9.475,
+  "b_low_branch": 0.2,
+  "ecg_level_mean_validation": 115.58,
+  "calfree": {
+   "n": 144,
+   "fraction_of_draws_in_low_branch_mean": 0.475,
+   "current_two_stage": 11.304,
+   "gated_system": 11.28,
+   "MAE_with_CI": {
+    "FLARE": [
+     11.28,
+     [
+      10.449,
+      12.171
+     ]
+    ],
+    "two_stage_without_gate": [
+     11.304,
+     [
+      10.464,
+      12.183
+     ]
+    ],
+    "absolute_network": [
+     12.769,
+     [
+      11.853,
+      13.72
+     ]
+    ]
+   },
+   "FLARE_minus_absolute": [
+    -1.489,
+    [
+     -2.079,
+     -0.93
+    ]
+   ],
+   "difference": [
+    -0.024,
+    [
+     -0.054,
+     0.004
+    ]
+   ],
+   "mostly_low": {
+    "n": 72,
+    "current": 12.219,
+    "gated": 12.173,
+    "difference": [
+     -0.046,
+     [
+      -0.102,
+      0.009
+     ]
+    ]
+   },
+   "mostly_high": {
+    "n": 72,
+    "current": 10.389,
+    "gated": 10.386,
+    "difference": [
+     -0.003,
+     [
+      -0.02,
+      0.011
+     ]
+    ]
+   }
+  },
+  "aami": {
+   "n": 108,
+   "fraction_of_draws_in_low_branch_mean": 0.403,
+   "current_two_stage": 11.421,
+   "gated_system": 11.392,
+   "MAE_with_CI": {
+    "FLARE": [
+     11.392,
+     [
+      10.478,
+      12.335
+     ]
+    ],
+    "two_stage_without_gate": [
+     11.421,
+     [
+      10.493,
+      12.391
+     ]
+    ],
+    "absolute_network": [
+     12.652,
+     [
+      11.661,
+      13.711
+     ]
+    ]
+   },
+   "FLARE_minus_absolute": [
+    -1.261,
+    [
+     -1.941,
+     -0.569
+    ]
+   ],
+   "difference": [
+    -0.029,
+    [
+     -0.055,
+     -0.001
+    ]
+   ],
+   "mostly_low": {
+    "n": 41,
+    "current": 10.312,
+    "gated": 10.254,
+    "difference": [
+     -0.057,
+     [
+      -0.119,
+      0.01
+     ]
+    ]
+   },
+   "mostly_high": {
+    "n": 67,
+    "current": 12.099,
+    "gated": 12.088,
+    "difference": [
+     -0.012,
+     [
+      -0.027,
+      0.001
+     ]
+    ]
+   }
+  }
+ },
+ "DBP": {
+  "tau": 4.881,
+  "b_low_branch": 0.15,
+  "ecg_level_mean_validation": 63.02,
+  "calfree": {
+   "n": 144,
+   "fraction_of_draws_in_low_branch_mean": 0.491,
+   "current_two_stage": 7.531,
+   "gated_system": 7.513,
+   "MAE_with_CI": {
+    "FLARE": [
+     7.513,
+     [
+      6.927,
+      8.151
+     ]
+    ],
+    "two_stage_without_gate": [
+     7.531,
+     [
+      6.937,
+      8.195
+     ]
+    ],
+    "absolute_network": [
+     8.305,
+     [
+      7.635,
+      9.028
+     ]
+    ]
+   },
+   "FLARE_minus_absolute": [
+    -0.791,
+    [
+     -1.152,
+     -0.421
+    ]
+   ],
+   "difference": [
+    -0.018,
+    [
+     -0.035,
+     -0.001
+    ]
+   ],
+   "mostly_low": {
+    "n": 72,
+    "current": 7.734,
+    "gated": 7.697,
+    "difference": [
+     -0.037,
+     [
+      -0.07,
+      -0.005
+     ]
+    ]
+   },
+   "mostly_high": {
+    "n": 72,
+    "current": 7.328,
+    "gated": 7.329,
+    "difference": [
+     0.001,
+     [
+      -0.005,
+      0.009
+     ]
+    ]
+   }
+  },
+  "aami": {
+   "n": 108,
+   "fraction_of_draws_in_low_branch_mean": 0.402,
+   "current_two_stage": 7.906,
+   "gated_system": 7.905,
+   "MAE_with_CI": {
+    "FLARE": [
+     7.905,
+     [
+      7.146,
+      8.639
+     ]
+    ],
+    "two_stage_without_gate": [
+     7.906,
+     [
+      7.199,
+      8.724
+     ]
+    ],
+    "absolute_network": [
+     8.376,
+     [
+      7.67,
+      9.174
+     ]
+    ]
+   },
+   "FLARE_minus_absolute": [
+    -0.471,
+    [
+     -0.876,
+     -0.048
+    ]
+   ],
+   "difference": [
+    -0.001,
+    [
+     -0.011,
+     0.01
+    ]
+   ],
+   "mostly_low": {
+    "n": 42,
+    "current": 7.885,
+    "gated": 7.89,
+    "difference": [
+     0.005,
+     [
+      -0.02,
+      0.032
+     ]
+    ]
+   },
+   "mostly_high": {
+    "n": 66,
+    "current": 7.918,
+    "gated": 7.914,
+    "difference": [
+     -0.004,
+     [
+      -0.009,
+      0.001
+     ]
+    ]
+   }
+  }
+ }
+}

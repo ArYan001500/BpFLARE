@@ -1,0 +1,428 @@
+{
+  "analysis_id": "s69_two_stage_uci",
+  "created_utc": "2026-10-02T19:47:34.070214+00:00",
+  "draws": 50,
+  "group_unit": "record",
+  "results": {
+    "5": {
+      "SBP": {
+        "absolute loss, no calibration": {
+          "mae": 17.69461191606365,
+          "ci": [
+            17.345722402227086,
+            18.04995002431135
+          ]
+        },
+        "warm-up mean, no model": {
+          "mae": 4.192325199444961,
+          "ci": [
+            4.098481136046714,
+            4.285368834724305
+          ],
+          "vs_calibration_free": {
+            "delta": -13.502286716618693,
+            "ci": [
+              -13.88367873650857,
+              -13.150602998727232
+            ],
+            "significant": true
+          }
+        },
+        "two-stage cuffless, single tracker": {
+          "mae": 19.277600467407968,
+          "ci": [
+            18.860757042781877,
+            19.698775990317014
+          ],
+          "vs_calibration_free": {
+            "delta": 1.5829885513443156,
+            "ci": [
+              1.3048708719116502,
+              1.853569676462977
+            ],
+            "significant": true
+          }
+        },
+        "two-stage cuffless, tracker ensemble": {
+          "mae": 19.127875854499337,
+          "ci": [
+            18.70818799397546,
+            19.553581114622933
+          ],
+          "vs_calibration_free": {
+            "delta": 1.4332639384356864,
+            "ci": [
+              1.151686978742799,
+              1.708370951940575
+            ],
+            "significant": true
+          }
+        },
+        "pairwise + cuff on the warm-up windows": {
+          "mae": 5.786629871547905,
+          "ci": [
+            5.693339108572839,
+            5.881747395950631
+          ],
+          "vs_calibration_free": {
+            "delta": -11.907982044515746,
+            "ci": [
+              -12.286418017207852,
+              -11.547716832078404
+            ],
+            "significant": true
+          }
+        }
+      },
+      "DBP": {
+        "absolute loss, no calibration": {
+          "mae": 9.263815340663582,
+          "ci": [
+            9.078383241107106,
+            9.449600224715562
+          ]
+        },
+        "warm-up mean, no model": {
+          "mae": 2.3346328388862427,
+          "ci": [
+            2.2726837539226357,
+            2.3978562480955774
+          ],
+          "vs_calibration_free": {
+            "delta": -6.92918250177734,
+            "ci": [
+              -7.111895734782191,
+              -6.741942399907374
+            ],
+            "significant": true
+          }
+        },
+        "two-stage cuffless, single tracker": {
+          "mae": 8.655102042531196,
+          "ci": [
+            8.46518474517858,
+            8.837085043320748
+          ],
+          "vs_calibration_free": {
+            "delta": -0.6087132981323848,
+            "ci": [
+              -0.7111752515303149,
+              -0.5050805727733971
+            ],
+            "significant": true
+          }
+        },
+        "two-stage cuffless, tracker ensemble": {
+          "mae": 8.547349843173691,
+          "ci": [
+            8.357116143869527,
+            8.73076281434813
+          ],
+          "vs_calibration_free": {
+            "delta": -0.7164654974898897,
+            "ci": [
+              -0.8171654149796124,
+              -0.6117403396792847
+            ],
+            "significant": true
+          }
+        },
+        "pairwise + cuff on the warm-up windows": {
+          "mae": 3.16802690927418,
+          "ci": [
+            3.104892844842653,
+            3.2367810024004005
+          ],
+          "vs_calibration_free": {
+            "delta": -6.095788431389402,
+            "ci": [
+              -6.280944525328698,
+              -5.908757234559611
+            ],
+            "significant": true
+          }
+        }
+      }
+    },
+    "10": {
+      "SBP": {
+        "absolute loss, no calibration": {
+          "mae": 17.693986301849623,
+          "ci": [
+            17.34463520525225,
+            18.048917147647835
+          ]
+        },
+        "warm-up mean, no model": {
+          "mae": 4.0242221918797565,
+          "ci": [
+            3.934099946590002,
+            4.114817854954758
+          ],
+          "vs_calibration_free": {
+            "delta": -13.669764109969865,
+            "ci": [
+              -14.050574402894348,
+              -13.318867526857678
+            ],
+            "significant": true
+          }
+        },
+        "two-stage cuffless, single tracker": {
+          "mae": 19.22839884098508,
+          "ci": [
+            18.806898378790102,
+            19.646722237137052
+          ],
+          "vs_calibration_free": {
+            "delta": 1.534412539135454,
+            "ci": [
+              1.254699464840428,
+              1.808271979879225
+            ],
+            "significant": true
+          }
+        },
+        "two-stage cuffless, tracker ensemble": {
+          "mae": 19.090946456316246,
+          "ci": [
+            18.66850034294816,
+            19.517839525572082
+          ],
+          "vs_calibration_free": {
+            "delta": 1.396960154466623,
+            "ci": [
+              1.1140820766877346,
+              1.671892480887438
+            ],
+            "significant": true
+          }
+        },
+        "pairwise + cuff on the warm-up windows": {
+          "mae": 5.535698425810191,
+          "ci": [
+            5.444403857709565,
+            5.627387070007327
+          ],
+          "vs_calibration_free": {
+            "delta": -12.15828787603943,
+            "ci": [
+              -12.538271035338624,
+              -11.80056337566046
+            ],
+            "significant": true
+          }
+        }
+      },
+      "DBP": {
+        "absolute loss, no calibration": {
+          "mae": 9.262681776951561,
+          "ci": [
+            9.077637390066242,
+            9.448331060358553
+          ]
+        },
+        "warm-up mean, no model": {
+          "mae": 2.2418145613418927,
+          "ci": [
+            2.182154544405346,
+            2.3037955802215984
+          ],
+          "vs_calibration_free": {
+            "delta": -7.020867215609668,
+            "ci": [
+              -7.204189702726127,
+              -6.833973895960186
+            ],
+            "significant": true
+          }
+        },
+        "two-stage cuffless, single tracker": {
+          "mae": 8.620932261286018,
+          "ci": [
+            8.42993334928342,
+            8.804774436722836
+          ],
+          "vs_calibration_free": {
+            "delta": -0.6417495156655433,
+            "ci": [
+              -0.7452249077253998,
+              -0.5384518323656762
+            ],
+            "significant": true
+          }
+        },
+        "two-stage cuffless, tracker ensemble": {
+          "mae": 8.521738034314305,
+          "ci": [
+            8.329394379310518,
+            8.705481193335624
+          ],
+          "vs_calibration_free": {
+            "delta": -0.7409437426372547,
+            "ci": [
+              -0.8427401920848794,
+              -0.636668748921469
+            ],
+            "significant": true
+          }
+        },
+        "pairwise + cuff on the warm-up windows": {
+          "mae": 3.0320159136062323,
+          "ci": [
+            2.9701427921954013,
+            3.0989441791862946
+          ],
+          "vs_calibration_free": {
+            "delta": -6.23066586334533,
+            "ci": [
+              -6.415517205996726,
+              -6.041787470447143
+            ],
+            "significant": true
+          }
+        }
+      }
+    },
+    "20": {
+      "SBP": {
+        "absolute loss, no calibration": {
+          "mae": 17.690596479394856,
+          "ci": [
+            17.34125651299461,
+            18.045506321400115
+          ]
+        },
+        "warm-up mean, no model": {
+          "mae": 3.949589725396427,
+          "ci": [
+            3.8595319109076116,
+            4.040200138738282
+          ],
+          "vs_calibration_free": {
+            "delta": -13.741006753998432,
+            "ci": [
+              -14.121140501229,
+              -13.389649441197044
+            ],
+            "significant": true
+          }
+        },
+        "two-stage cuffless, single tracker": {
+          "mae": 19.205731696605078,
+          "ci": [
+            18.78434459974346,
+            19.62420158199725
+          ],
+          "vs_calibration_free": {
+            "delta": 1.5151352172102193,
+            "ci": [
+              1.2350766114153264,
+              1.7850072048187364
+            ],
+            "significant": true
+          }
+        },
+        "two-stage cuffless, tracker ensemble": {
+          "mae": 19.07688791570272,
+          "ci": [
+            18.653926758074412,
+            19.50705837019616
+          ],
+          "vs_calibration_free": {
+            "delta": 1.3862914363078596,
+            "ci": [
+              1.1040539388089894,
+              1.6598473147143193
+            ],
+            "significant": true
+          }
+        },
+        "pairwise + cuff on the warm-up windows": {
+          "mae": 5.417197189047412,
+          "ci": [
+            5.327020497090246,
+            5.507397615317342
+          ],
+          "vs_calibration_free": {
+            "delta": -12.273399290347445,
+            "ci": [
+              -12.652158420160832,
+              -11.913855653112348
+            ],
+            "significant": true
+          }
+        }
+      },
+      "DBP": {
+        "absolute loss, no calibration": {
+          "mae": 9.263710999770586,
+          "ci": [
+            9.078658776232686,
+            9.450906358858383
+          ]
+        },
+        "warm-up mean, no model": {
+          "mae": 2.198164409742553,
+          "ci": [
+            2.1397314943606305,
+            2.2597273255757475
+          ],
+          "vs_calibration_free": {
+            "delta": -7.065546590028034,
+            "ci": [
+              -7.249346510319713,
+              -6.880506837771359
+            ],
+            "significant": true
+          }
+        },
+        "two-stage cuffless, single tracker": {
+          "mae": 8.602669668266165,
+          "ci": [
+            8.412133899276615,
+            8.78387035511959
+          ],
+          "vs_calibration_free": {
+            "delta": -0.6610413315044222,
+            "ci": [
+              -0.7639601481718393,
+              -0.5568130335209059
+            ],
+            "significant": true
+          }
+        },
+        "two-stage cuffless, tracker ensemble": {
+          "mae": 8.508933317097629,
+          "ci": [
+            8.318653380444003,
+            8.691982389357225
+          ],
+          "vs_calibration_free": {
+            "delta": -0.7547776826729581,
+            "ci": [
+              -0.8560842910353601,
+              -0.6506380440052472
+            ],
+            "significant": true
+          }
+        },
+        "pairwise + cuff on the warm-up windows": {
+          "mae": 2.965902928238022,
+          "ci": [
+            2.9050421662628096,
+            3.0316656210059434
+          ],
+          "vs_calibration_free": {
+            "delta": -6.297808071532566,
+            "ci": [
+              -6.482691220898661,
+              -6.108976618167339
+            ],
+            "significant": true
+          }
+        }
+      }
+    }
+  }
+}

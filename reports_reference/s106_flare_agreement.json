@@ -1,0 +1,67 @@
+{
+ "protocol": "s106: pooled descriptive agreement of FLARE (gated) on CalFree over all scored window-draw pairs (mean error,\nSD, 95% limits of agreement, % within 5/10/15 mmHg, slope on the reference), absolute network on the same windows;\nsaves a 60,000-pair sample for the agreement figure. Same rules and draws as s104, whose description follows.\ns104: FLARE (gated) by fluctuation branch, deployable, same rules, windows and draws as s93.\nPer subject and draw: fluctuation index v (SD of the pairwise tracker over the 20 warm-up windows), gate v <= tau\n(tau = median over validation subject-draws), anchor A = L + 1[low] * b * (E - mean E), b chosen on low-branch\nvalidation subject-draws. Subjects are grouped by the branch they enter in most draws (mostly low / mostly high).\nPer group: MAE of the absolute network, the two-stage core (b = 0) and FLARE, and paired differences with 2000\nsubject-bootstrap replicates. Also the fraction of draws in which a subject's branch agrees with its majority\nbranch, and the true within-subject SD by group. CalFree exploratory; AAMI used for nothing else.\n",
+ "SBP": {
+  "tau": 9.475,
+  "b": 0.2,
+  "calfree": {
+   "FLARE": {
+    "n_pairs": 2736000,
+    "ME": -1.04,
+    "SD": 14.39,
+    "LoA": [
+     -29.2,
+     27.2
+    ],
+    "within5": 28.6,
+    "within10": 53.2,
+    "within15": 71.9,
+    "slope_vs_reference": -0.6
+   },
+   "absolute": {
+    "n_pairs": 2736000,
+    "ME": -0.46,
+    "SD": 16.32,
+    "LoA": [
+     -32.4,
+     31.5
+    ],
+    "within5": 24.9,
+    "within10": 47.8,
+    "within15": 66.4,
+    "slope_vs_reference": -0.64
+   }
+  }
+ },
+ "DBP": {
+  "tau": 4.881,
+  "b": 0.15,
+  "calfree": {
+   "FLARE": {
+    "n_pairs": 2736000,
+    "ME": 0.13,
+    "SD": 9.49,
+    "LoA": [
+     -18.5,
+     18.7
+    ],
+    "within5": 40.3,
+    "within10": 71.8,
+    "within15": 89.4,
+    "slope_vs_reference": -0.66
+   },
+   "absolute": {
+    "n_pairs": 2736000,
+    "ME": -0.89,
+    "SD": 10.58,
+    "LoA": [
+     -21.6,
+     19.9
+    ],
+    "within5": 37.9,
+    "within10": 67.7,
+    "within15": 85.0,
+    "slope_vs_reference": -0.71
+   }
+  }
+ }
+}

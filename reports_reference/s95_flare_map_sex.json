@@ -1,0 +1,283 @@
+{
+ "protocol": "s95: FLARE (seed-42 tracker) for mean arterial pressure and by sex.\n\nMAP: the same three stages with the MAP output channel (fluctuation index from the MAP channel, stage-1 ridge\nand ECG ridge for MAP, threshold and ECG weight chosen on validation). Hypotension: windows with reference\nMAP < 65 mmHg; a window is flagged when the estimate is below 65 mmHg (sensitivity, specificity; pooled over\nwindows and draws, descriptive).\nSex: SBP and DBP difference FLARE minus absolute network, per sex recorded in VitalDB (1 = male, 0 = female),\nsubject bootstrap within sex; interaction = female minus male, bootstrapped within sex. Post hoc, descriptive.\n",
+ "SBP": {
+  "tau": 9.475,
+  "b": 0.2,
+  "calfree": {
+   "FLARE": [
+    11.28,
+    [
+     10.449,
+     12.171
+    ]
+   ],
+   "absolute": [
+    12.769,
+    [
+     11.866,
+     13.761
+    ]
+   ],
+   "FLARE_minus_absolute": [
+    -1.489,
+    [
+     -2.098,
+     -0.938
+    ]
+   ],
+   "by_sex": {
+    "female": {
+     "n": 58,
+     "FLARE_minus_absolute": [
+      -1.328,
+      [
+       -2.197,
+       -0.457
+      ]
+     ]
+    },
+    "male": {
+     "n": 86,
+     "FLARE_minus_absolute": [
+      -1.598,
+      [
+       -2.357,
+       -0.884
+      ]
+     ]
+    },
+    "female_minus_male": [
+     0.271,
+     [
+      -0.91,
+      1.446
+     ]
+    ]
+   }
+  },
+  "aami": {
+   "FLARE": [
+    11.392,
+    [
+     10.5,
+     12.372
+    ]
+   ],
+   "absolute": [
+    12.652,
+    [
+     11.673,
+     13.729
+    ]
+   ],
+   "FLARE_minus_absolute": [
+    -1.261,
+    [
+     -2.026,
+     -0.521
+    ]
+   ],
+   "by_sex": {
+    "female": {
+     "n": 44,
+     "FLARE_minus_absolute": [
+      -1.335,
+      [
+       -2.316,
+       -0.375
+      ]
+     ]
+    },
+    "male": {
+     "n": 64,
+     "FLARE_minus_absolute": [
+      -1.21,
+      [
+       -2.259,
+       -0.098
+      ]
+     ]
+    },
+    "female_minus_male": [
+     -0.125,
+     [
+      -1.609,
+      1.232
+     ]
+    ]
+   }
+  }
+ },
+ "DBP": {
+  "tau": 4.881,
+  "b": 0.15,
+  "calfree": {
+   "FLARE": [
+    7.513,
+    [
+     6.909,
+     8.181
+    ]
+   ],
+   "absolute": [
+    8.305,
+    [
+     7.604,
+     9.047
+    ]
+   ],
+   "FLARE_minus_absolute": [
+    -0.791,
+    [
+     -1.149,
+     -0.43
+    ]
+   ],
+   "by_sex": {
+    "female": {
+     "n": 58,
+     "FLARE_minus_absolute": [
+      -0.415,
+      [
+       -0.927,
+       0.122
+      ]
+     ]
+    },
+    "male": {
+     "n": 86,
+     "FLARE_minus_absolute": [
+      -1.045,
+      [
+       -1.537,
+       -0.529
+      ]
+     ]
+    },
+    "female_minus_male": [
+     0.629,
+     [
+      -0.055,
+      1.268
+     ]
+    ]
+   }
+  },
+  "aami": {
+   "FLARE": [
+    7.905,
+    [
+     7.195,
+     8.675
+    ]
+   ],
+   "absolute": [
+    8.376,
+    [
+     7.643,
+     9.176
+    ]
+   ],
+   "FLARE_minus_absolute": [
+    -0.471,
+    [
+     -0.859,
+     -0.039
+    ]
+   ],
+   "by_sex": {
+    "female": {
+     "n": 44,
+     "FLARE_minus_absolute": [
+      -0.227,
+      [
+       -0.835,
+       0.37
+      ]
+     ]
+    },
+    "male": {
+     "n": 64,
+     "FLARE_minus_absolute": [
+      -0.638,
+      [
+       -1.18,
+       -0.107
+      ]
+     ]
+    },
+    "female_minus_male": [
+     0.411,
+     [
+      -0.432,
+      1.223
+     ]
+    ]
+   }
+  }
+ },
+ "MAP": {
+  "tau": 7.13,
+  "b": 0.65,
+  "calfree": {
+   "FLARE": [
+    8.53,
+    [
+     7.876,
+     9.189
+    ]
+   ],
+   "absolute": [
+    9.53,
+    [
+     8.816,
+     10.296
+    ]
+   ],
+   "FLARE_minus_absolute": [
+    -0.999,
+    [
+     -1.463,
+     -0.556
+    ]
+   ],
+   "hypotension_MAP_below_65": {
+    "share_of_windows": 0.112,
+    "FLARE_sensitivity": 0.114,
+    "FLARE_specificity": 0.99,
+    "absolute_sensitivity": 0.163,
+    "absolute_specificity": 0.98
+   }
+  },
+  "aami": {
+   "FLARE": [
+    8.652,
+    [
+     7.947,
+     9.39
+    ]
+   ],
+   "absolute": [
+    9.46,
+    [
+     8.736,
+     10.223
+    ]
+   ],
+   "FLARE_minus_absolute": [
+    -0.808,
+    [
+     -1.32,
+     -0.314
+    ]
+   ],
+   "hypotension_MAP_below_65": {
+    "share_of_windows": 0.087,
+    "FLARE_sensitivity": 0.141,
+    "FLARE_specificity": 0.984,
+    "absolute_sensitivity": 0.095,
+    "absolute_specificity": 0.987
+   }
+  }
+ }
+}

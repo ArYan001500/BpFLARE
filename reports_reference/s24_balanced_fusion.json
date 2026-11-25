@@ -1,0 +1,104 @@
+{
+  "analysis_id": "s24_balanced_fusion",
+  "created_utc": "2026-09-08T17:13:50.189633+00:00",
+  "results": {
+    "BALANCED": {
+      "arm": "BALANCED",
+      "seed": 42,
+      "phase_zeroed": false,
+      "best_epoch": 2,
+      "validation_score": 35.0429545255188,
+      "mean_gate_toward_raw": 0.6942128539085388,
+      "branch_scale_raw": 0.8124054670333862,
+      "branch_scale_cwc": 0.5220503807067871,
+      "minutes": 54.049574503333616,
+      "test": {
+        "SBP": {
+          "mae": 12.45066579050488,
+          "me": -0.06068819178475274,
+          "sd": 15.95768551825395,
+          "pearson_r": 0.531494917598253
+        },
+        "DBP": {
+          "mae": 8.455345042745272,
+          "me": -0.8807961461941402,
+          "sd": 10.72379466915064,
+          "pearson_r": 0.458892456119202
+        },
+        "MAP": {
+          "mae": 9.449820269511806,
+          "me": -0.4124830301271545,
+          "sd": 12.012656549061097,
+          "pearson_r": 0.5463692588955554
+        },
+        "selection_score": 34.218708930636446,
+        "error_decomposition": {
+          "SBP": {
+            "between_subject_bias_mae": 8.806705079476039,
+            "within_subject_mae": 8.571844333313901,
+            "within_subject_r_mean": 0.6119357867971551
+          },
+          "DBP": {
+            "between_subject_bias_mae": 6.522472400665283,
+            "within_subject_mae": 5.117530281513599,
+            "within_subject_r_mean": 0.5156817777964683
+          },
+          "MAP": {
+            "between_subject_bias_mae": 6.7639460948109615,
+            "within_subject_mae": 6.317012495570382,
+            "within_subject_r_mean": 0.6013130749803577
+          }
+        }
+      }
+    },
+    "BALANCED_MAG": {
+      "arm": "BALANCED_MAG",
+      "seed": 42,
+      "phase_zeroed": true,
+      "best_epoch": 2,
+      "validation_score": 34.910850335273544,
+      "mean_gate_toward_raw": 0.6905853152275085,
+      "branch_scale_raw": 0.8223382830619812,
+      "branch_scale_cwc": 0.48524558544158936,
+      "minutes": 53.89108398499957,
+      "test": {
+        "SBP": {
+          "mae": 12.450874577760697,
+          "me": -1.2267649037308164,
+          "sd": 15.949731686607622,
+          "pearson_r": 0.5292805558349222
+        },
+        "DBP": {
+          "mae": 8.387216133475304,
+          "me": -1.7666201365656322,
+          "sd": 10.505825471648244,
+          "pearson_r": 0.4794336356491974
+        },
+        "MAP": {
+          "mae": 9.417257136669424,
+          "me": -1.3669148824943436,
+          "sd": 11.878201309841417,
+          "pearson_r": 0.5551983489017206
+        },
+        "selection_score": 34.12647085261842,
+        "error_decomposition": {
+          "SBP": {
+            "between_subject_bias_mae": 8.745990950531429,
+            "within_subject_mae": 8.494627016156912,
+            "within_subject_r_mean": 0.6204969665816917
+          },
+          "DBP": {
+            "between_subject_bias_mae": 6.643472313086191,
+            "within_subject_mae": 4.991349075839255,
+            "within_subject_r_mean": 0.5294284731767254
+          },
+          "MAP": {
+            "between_subject_bias_mae": 6.858036572966309,
+            "within_subject_mae": 6.182989175261888,
+            "within_subject_r_mean": 0.6155026760630632
+          }
+        }
+      }
+    }
+  }
+}

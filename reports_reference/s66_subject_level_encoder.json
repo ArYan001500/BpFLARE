@@ -1,0 +1,86 @@
+{
+  "analysis_id": "s66_subject_level_encoder",
+  "created_utc": "2026-09-24T09:56:01.793560+00:00",
+  "steps": 12000,
+  "best_step": 1000,
+  "subjects_train": 1099,
+  "draws": 50,
+  "results": {
+    "10": {
+      "old encoder, mean + ridge": {
+        "SBP": {
+          "pearson_r": 0.3510461806349485,
+          "level_mae": 8.771768739803324,
+          "two_stage_mae": 11.419294971256452
+        },
+        "DBP": {
+          "pearson_r": 0.48142262173641753,
+          "level_mae": 6.307607322102866,
+          "two_stage_mae": 7.583033834358791
+        }
+      },
+      "new encoder, mean + ridge": {
+        "SBP": {
+          "pearson_r": 0.32935912204207646,
+          "level_mae": 8.920822882494171,
+          "two_stage_mae": 11.640900221619003
+        },
+        "DBP": {
+          "pearson_r": 0.3072288087357132,
+          "level_mae": 6.697605026204421,
+          "two_stage_mae": 8.035360794149568
+        }
+      },
+      "new encoder, learned pooling": {
+        "SBP": {
+          "pearson_r": 0.33976855421290497,
+          "level_mae": 8.816290185689926,
+          "two_stage_mae": 11.590668237947263
+        },
+        "DBP": {
+          "pearson_r": 0.28239766189740023,
+          "level_mae": 6.75730219514105,
+          "two_stage_mae": 8.088460738009672
+        }
+      }
+    },
+    "20": {
+      "old encoder, mean + ridge": {
+        "SBP": {
+          "pearson_r": 0.3578783193782332,
+          "level_mae": 8.742927286911902,
+          "two_stage_mae": 11.304048361975358
+        },
+        "DBP": {
+          "pearson_r": 0.4913671462656385,
+          "level_mae": 6.287684424146067,
+          "two_stage_mae": 7.531103679188425
+        }
+      },
+      "new encoder, mean + ridge": {
+        "SBP": {
+          "pearson_r": 0.3347240179835548,
+          "level_mae": 8.917702575365654,
+          "two_stage_mae": 11.484181955486262
+        },
+        "DBP": {
+          "pearson_r": 0.3101833046568602,
+          "level_mae": 6.699484325067226,
+          "two_stage_mae": 7.9879869798473955
+        }
+      },
+      "new encoder, learned pooling": {
+        "SBP": {
+          "pearson_r": 0.34464018122768514,
+          "level_mae": 8.802800811041728,
+          "two_stage_mae": 11.438696926363171
+        },
+        "DBP": {
+          "pearson_r": 0.2838811403611444,
+          "level_mae": 6.759463467844327,
+          "two_stage_mae": 8.039925592189782
+        }
+      }
+    }
+  }
+}

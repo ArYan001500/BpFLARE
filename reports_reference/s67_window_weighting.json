@@ -1,0 +1,145 @@
+{
+  "analysis_id": "s67_window_weighting",
+  "created_utc": "2026-09-24T09:47:12.600084+00:00",
+  "draws": 50,
+  "results": {
+    "SBP": {
+      "10": {
+        "uniform average": {
+          "level_mae": 8.7717687429221,
+          "two_stage_mae": 11.419294972907746
+        },
+        "predicted-quality weights, T=0.5": {
+          "level_mae": 8.825419201880852,
+          "two_stage_mae": 11.443598173853774
+        },
+        "true-error weights, T=0.5 (not deployable)": {
+          "level_mae": 7.161146891711337,
+          "two_stage_mae": 10.687329609213878
+        },
+        "predicted-quality weights, T=1.0": {
+          "level_mae": 8.794927299985405,
+          "two_stage_mae": 11.426371166394356
+        },
+        "true-error weights, T=1.0 (not deployable)": {
+          "level_mae": 7.835096753375311,
+          "two_stage_mae": 10.987918844901351
+        },
+        "predicted-quality weights, T=2.0": {
+          "level_mae": 8.781674636417092,
+          "two_stage_mae": 11.421311318043173
+        },
+        "true-error weights, T=2.0 (not deployable)": {
+          "level_mae": 8.263112942987254,
+          "two_stage_mae": 11.18338441847059
+        }
+      },
+      "20": {
+        "uniform average": {
+          "level_mae": 8.742927288587014,
+          "two_stage_mae": 11.304048362536609
+        },
+        "predicted-quality weights, T=0.5": {
+          "level_mae": 8.797053716489962,
+          "two_stage_mae": 11.319851899041563
+        },
+        "true-error weights, T=0.5 (not deployable)": {
+          "level_mae": 7.0449573640068515,
+          "two_stage_mae": 10.487890565057382
+        },
+        "predicted-quality weights, T=1.0": {
+          "level_mae": 8.767475297357233,
+          "two_stage_mae": 11.3065723474598
+        },
+        "true-error weights, T=1.0 (not deployable)": {
+          "level_mae": 7.7679775111700415,
+          "two_stage_mae": 10.828625546270258
+        },
+        "predicted-quality weights, T=2.0": {
+          "level_mae": 8.754638976010078,
+          "two_stage_mae": 11.303967998107096
+        },
+        "true-error weights, T=2.0 (not deployable)": {
+          "level_mae": 8.215838756259364,
+          "two_stage_mae": 11.045021959496514
+        }
+      },
+      "window_noise": {
+        "10": 8.773173143305995,
+        "20": 8.73639482505552,
+        "60": 8.71296026530793,
+        "200": 8.710126038000146,
+        "400": 8.713681487168214
+      }
+    },
+    "DBP": {
+      "10": {
+        "uniform average": {
+          "level_mae": 6.307607283053203,
+          "two_stage_mae": 7.583033778261109
+        },
+        "predicted-quality weights, T=0.5": {
+          "level_mae": 6.306425669092609,
+          "two_stage_mae": 7.6015871919377895
+        },
+        "true-error weights, T=0.5 (not deployable)": {
+          "level_mae": 4.651956126605087,
+          "two_stage_mae": 6.610962196981147
+        },
+        "predicted-quality weights, T=1.0": {
+          "level_mae": 6.300955253169477,
+          "two_stage_mae": 7.587387373793525
+        },
+        "true-error weights, T=1.0 (not deployable)": {
+          "level_mae": 5.333674513463519,
+          "two_stage_mae": 6.999333319907549
+        },
+        "predicted-quality weights, T=2.0": {
+          "level_mae": 6.302278766869859,
+          "two_stage_mae": 7.583722625863724
+        },
+        "true-error weights, T=2.0 (not deployable)": {
+          "level_mae": 5.775039237429135,
+          "two_stage_mae": 7.2592471339203035
+        }
+      },
+      "20": {
+        "uniform average": {
+          "level_mae": 6.287684382846917,
+          "two_stage_mae": 7.531103628690898
+        },
+        "predicted-quality weights, T=0.5": {
+          "level_mae": 6.284358939886473,
+          "two_stage_mae": 7.540911114451455
+        },
+        "true-error weights, T=0.5 (not deployable)": {
+          "level_mae": 4.5492073318756505,
+          "two_stage_mae": 6.487538540523351
+        },
+        "predicted-quality weights, T=1.0": {
+          "level_mae": 6.281100401074832,
+          "two_stage_mae": 7.531257274349492
+        },
+        "true-error weights, T=1.0 (not deployable)": {
+          "level_mae": 5.27112297434876,
+          "two_stage_mae": 6.906605592694089
+        },
+        "predicted-quality weights, T=2.0": {
+          "level_mae": 6.283054277336209,
+          "two_stage_mae": 7.529902845878477
+        },
+        "true-error weights, T=2.0 (not deployable)": {
+          "level_mae": 5.733147420534721,
+          "two_stage_mae": 7.184498422124038
+        }
+      },
+      "window_noise": {
+        "10": 6.281474423086674,
+        "20": 6.281828953496334,
+        "60": 6.278666339577555,
+        "200": 6.269501604883844,
+        "400": 6.270212954332841
+      }
+    }
+  }
+}

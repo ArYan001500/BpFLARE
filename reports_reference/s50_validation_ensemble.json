@@ -1,0 +1,30 @@
+{
+  "analysis_id": "s50_validation_ensemble",
+  "results": {
+    "members": [
+      "REG_WD",
+      "BALANCED",
+      "RAW_s43w",
+      "CWC3_s43w",
+      "REG_AUGWD",
+      "RAW_seed44",
+      "MAGONLY_s43w",
+      "REG_WD"
+    ],
+    "single_best_on_validation": "REG_WD",
+    "best single, chosen on validation": {
+      "SBP": 12.615267542203268,
+      "DBP": 8.4297181773848
+    },
+    "validation-selected ensemble": {
+      "SBP": 12.060703065478139,
+      "DBP": 8.185316298264596
+    },
+    "pool_spread": {
+      "min": 12.45066579050488,
+      "max": 13.061070455710093,
+      "range": 0.6104046652052126,
+      "n": 18
+    }
+  }
+}

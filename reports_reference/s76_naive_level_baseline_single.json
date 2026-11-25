@@ -1,0 +1,31 @@
+{
+  "analysis_id": "s76_naive_level_baseline",
+  "created_utc": "2026-10-02T18:20:46.435759+00:00",
+  "warmup_windows": 20,
+  "draws": 50,
+  "bootstrap": 2000,
+  "results": {
+    "SBP": {
+      "ridge level (headline)": 11.304048362536609,
+      "mean absolute-network output": 11.809776687243529,
+      "naive_minus_headline": {
+        "delta": 0.50572832470692,
+        "ci": [
+          -0.04100993621351784,
+          1.0266075100913594
+        ]
+      }
+    },
+    "DBP": {
+      "ridge level (headline)": 7.531103628690898,
+      "mean absolute-network output": 7.915997937476425,
+      "naive_minus_headline": {
+        "delta": 0.3848943087855272,
+        "ci": [
+          0.03294710066375349,
+          0.7349905763003644
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,605 @@
+{
+ "protocol": "s102: contribution of the hand-crafted ECG/PPG features to the level, in deployable form (no gate).\nLevel = stage-1 ridge level L + b * (E - mean E), for every subject and draw; E is a ridge level from a subset of\nthe 8 window features (median over the 20 warm-up windows) fitted on the training subjects; b is chosen on the\nvalidation subject-draws (grid 0..1.5) and frozen. Feature sets: all 8; drop one; single feature. Score: change in\nthe two-stage MAE against the system without ECG (paired per subject, 50 draws, subject bootstrap 2000).\nCalFree exploratory; AAMI (108 subjects) used for nothing else. Same windows, draws and rules as s93 --no-gate.\nStandardized ridge coefficients of the 8-feature ECG level are also reported.\n",
+ "SBP": {
+  "all": {
+   "b": 0.15,
+   "standardized_coefficients": {
+    "HR": -1.93,
+    "RMSSD": -0.23,
+    "RR_SD": -0.22,
+    "PAT_peak": -0.32,
+    "PAT_foot": 0.58,
+    "R_width": 1.07,
+    "T_to_R": 0.75,
+    "PPG_interval": 0.16
+   },
+   "calfree": [
+    -0.016,
+    [
+     -0.052,
+     0.019
+    ]
+   ],
+   "aami": [
+    -0.031,
+    [
+     -0.061,
+     0.0
+    ]
+   ]
+  },
+  "drop HR": {
+   "b": 0.1,
+   "calfree": [
+    -0.002,
+    [
+     -0.017,
+     0.013
+    ]
+   ],
+   "aami": [
+    -0.013,
+    [
+     -0.03,
+     0.002
+    ]
+   ]
+  },
+  "drop RMSSD": {
+   "b": 0.15,
+   "calfree": [
+    -0.016,
+    [
+     -0.051,
+     0.019
+    ]
+   ],
+   "aami": [
+    -0.031,
+    [
+     -0.062,
+     0.0
+    ]
+   ]
+  },
+  "drop RR_SD": {
+   "b": 0.15,
+   "calfree": [
+    -0.016,
+    [
+     -0.052,
+     0.019
+    ]
+   ],
+   "aami": [
+    -0.031,
+    [
+     -0.063,
+     0.003
+    ]
+   ]
+  },
+  "drop PAT_peak": {
+   "b": 0.15,
+   "calfree": [
+    -0.017,
+    [
+     -0.051,
+     0.018
+    ]
+   ],
+   "aami": [
+    -0.029,
+    [
+     -0.061,
+     0.002
+    ]
+   ]
+  },
+  "drop PAT_foot": {
+   "b": 0.2,
+   "calfree": [
+    -0.027,
+    [
+     -0.073,
+     0.02
+    ]
+   ],
+   "aami": [
+    -0.03,
+    [
+     -0.072,
+     0.012
+    ]
+   ]
+  },
+  "drop R_width": {
+   "b": 0.2,
+   "calfree": [
+    -0.035,
+    [
+     -0.075,
+     0.008
+    ]
+   ],
+   "aami": [
+    -0.035,
+    [
+     -0.077,
+     0.005
+    ]
+   ]
+  },
+  "drop T_to_R": {
+   "b": 0.05,
+   "calfree": [
+    -0.007,
+    [
+     -0.018,
+     0.005
+    ]
+   ],
+   "aami": [
+    -0.015,
+    [
+     -0.026,
+     -0.005
+    ]
+   ]
+  },
+  "drop PPG_interval": {
+   "b": 0.15,
+   "calfree": [
+    -0.015,
+    [
+     -0.051,
+     0.018
+    ]
+   ],
+   "aami": [
+    -0.031,
+    [
+     -0.061,
+     0.002
+    ]
+   ]
+  },
+  "only HR": {
+   "b": 0.1,
+   "calfree": [
+    -0.022,
+    [
+     -0.042,
+     -0.003
+    ]
+   ],
+   "aami": [
+    -0.025,
+    [
+     -0.044,
+     -0.008
+    ]
+   ]
+  },
+  "only RMSSD": {
+   "b": 0.0,
+   "calfree": [
+    0.0,
+    [
+     0.0,
+     0.0
+    ]
+   ],
+   "aami": [
+    0.0,
+    [
+     0.0,
+     0.0
+    ]
+   ]
+  },
+  "only RR_SD": {
+   "b": 0.0,
+   "calfree": [
+    0.0,
+    [
+     0.0,
+     0.0
+    ]
+   ],
+   "aami": [
+    0.0,
+    [
+     0.0,
+     0.0
+    ]
+   ]
+  },
+  "only PAT_peak": {
+   "b": 1.5,
+   "calfree": [
+    -0.026,
+    [
+     -0.106,
+     0.053
+    ]
+   ],
+   "aami": [
+    -0.007,
+    [
+     -0.094,
+     0.084
+    ]
+   ]
+  },
+  "only PAT_foot": {
+   "b": 0.0,
+   "calfree": [
+    0.0,
+    [
+     0.0,
+     0.0
+    ]
+   ],
+   "aami": [
+    0.0,
+    [
+     0.0,
+     0.0
+    ]
+   ]
+  },
+  "only R_width": {
+   "b": 0.0,
+   "calfree": [
+    0.0,
+    [
+     0.0,
+     0.0
+    ]
+   ],
+   "aami": [
+    0.0,
+    [
+     0.0,
+     0.0
+    ]
+   ]
+  },
+  "only T_to_R": {
+   "b": 1.5,
+   "calfree": [
+    0.002,
+    [
+     -0.001,
+     0.005
+    ]
+   ],
+   "aami": [
+    0.005,
+    [
+     0.002,
+     0.008
+    ]
+   ]
+  },
+  "only PPG_interval": {
+   "b": 1.45,
+   "calfree": [
+    -0.011,
+    [
+     -0.1,
+     0.075
+    ]
+   ],
+   "aami": [
+    -0.021,
+    [
+     -0.104,
+     0.063
+    ]
+   ]
+  }
+ },
+ "DBP": {
+  "all": {
+   "b": 0.35,
+   "standardized_coefficients": {
+    "HR": -0.63,
+    "RMSSD": -0.34,
+    "RR_SD": -0.13,
+    "PAT_peak": -0.1,
+    "PAT_foot": 0.22,
+    "R_width": -0.14,
+    "T_to_R": 0.4,
+    "PPG_interval": -0.57
+   },
+   "calfree": [
+    -0.047,
+    [
+     -0.104,
+     0.006
+    ]
+   ],
+   "aami": [
+    -0.028,
+    [
+     -0.077,
+     0.025
+    ]
+   ]
+  },
+  "drop HR": {
+   "b": 0.4,
+   "calfree": [
+    -0.039,
+    [
+     -0.095,
+     0.018
+    ]
+   ],
+   "aami": [
+    -0.021,
+    [
+     -0.083,
+     0.045
+    ]
+   ]
+  },
+  "drop RMSSD": {
+   "b": 0.35,
+   "calfree": [
+    -0.046,
+    [
+     -0.098,
+     0.006
+    ]
+   ],
+   "aami": [
+    -0.03,
+    [
+     -0.08,
+     0.02
+    ]
+   ]
+  },
+  "drop RR_SD": {
+   "b": 0.35,
+   "calfree": [
+    -0.047,
+    [
+     -0.101,
+     0.006
+    ]
+   ],
+   "aami": [
+    -0.027,
+    [
+     -0.076,
+     0.025
+    ]
+   ]
+  },
+  "drop PAT_peak": {
+   "b": 0.4,
+   "calfree": [
+    -0.056,
+    [
+     -0.118,
+     0.004
+    ]
+   ],
+   "aami": [
+    -0.028,
+    [
+     -0.089,
+     0.033
+    ]
+   ]
+  },
+  "drop PAT_foot": {
+   "b": 0.45,
+   "calfree": [
+    -0.066,
+    [
+     -0.139,
+     0.003
+    ]
+   ],
+   "aami": [
+    -0.032,
+    [
+     -0.102,
+     0.039
+    ]
+   ]
+  },
+  "drop R_width": {
+   "b": 0.5,
+   "calfree": [
+    -0.059,
+    [
+     -0.134,
+     0.012
+    ]
+   ],
+   "aami": [
+    -0.035,
+    [
+     -0.104,
+     0.035
+    ]
+   ]
+  },
+  "drop T_to_R": {
+   "b": 0.55,
+   "calfree": [
+    -0.051,
+    [
+     -0.117,
+     0.015
+    ]
+   ],
+   "aami": [
+    -0.034,
+    [
+     -0.099,
+     0.033
+    ]
+   ]
+  },
+  "drop PPG_interval": {
+   "b": 0.1,
+   "calfree": [
+    -0.014,
+    [
+     -0.028,
+     -0.001
+    ]
+   ],
+   "aami": [
+    -0.012,
+    [
+     -0.026,
+     0.004
+    ]
+   ]
+  },
+  "only HR": {
+   "b": 0.2,
+   "calfree": [
+    -0.019,
+    [
+     -0.038,
+     -0.001
+    ]
+   ],
+   "aami": [
+    -0.012,
+    [
+     -0.032,
+     0.007
+    ]
+   ]
+  },
+  "only RMSSD": {
+   "b": 0.7,
+   "calfree": [
+    -0.062,
+    [
+     -0.155,
+     0.023
+    ]
+   ],
+   "aami": [
+    -0.029,
+    [
+     -0.131,
+     0.078
+    ]
+   ]
+  },
+  "only RR_SD": {
+   "b": 1.0,
+   "calfree": [
+    -0.06,
+    [
+     -0.155,
+     0.041
+    ]
+   ],
+   "aami": [
+    -0.053,
+    [
+     -0.177,
+     0.07
+    ]
+   ]
+  },
+  "only PAT_peak": {
+   "b": 1.5,
+   "calfree": [
+    0.013,
+    [
+     -0.009,
+     0.034
+    ]
+   ],
+   "aami": [
+    -0.013,
+    [
+     -0.039,
+     0.015
+    ]
+   ]
+  },
+  "only PAT_foot": {
+   "b": 0.0,
+   "calfree": [
+    0.0,
+    [
+     0.0,
+     0.0
+    ]
+   ],
+   "aami": [
+    0.0,
+    [
+     0.0,
+     0.0
+    ]
+   ]
+  },
+  "only R_width": {
+   "b": 0.0,
+   "calfree": [
+    0.0,
+    [
+     0.0,
+     0.0
+    ]
+   ],
+   "aami": [
+    0.0,
+    [
+     0.0,
+     0.0
+    ]
+   ]
+  },
+  "only T_to_R": {
+   "b": 1.5,
+   "calfree": [
+    0.0,
+    [
+     -0.003,
+     0.003
+    ]
+   ],
+   "aami": [
+    -0.001,
+    [
+     -0.004,
+     0.003
+    ]
+   ]
+  },
+  "only PPG_interval": {
+   "b": 0.85,
+   "calfree": [
+    -0.008,
+    [
+     -0.094,
+     0.078
+    ]
+   ],
+   "aami": [
+    0.009,
+    [
+     -0.078,
+     0.096
+    ]
+   ]
+  }
+ }
+}

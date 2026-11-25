@@ -1,0 +1,571 @@
+{
+ "protocol": "s104: FLARE (gated) by fluctuation branch, deployable, same rules, windows and draws as s93.\nPer subject and draw: fluctuation index v (SD of the pairwise tracker over the 20 warm-up windows), gate v <= tau\n(tau = median over validation subject-draws), anchor A = L + 1[low] * b * (E - mean E), b chosen on low-branch\nvalidation subject-draws. Subjects are grouped by the branch they enter in most draws (mostly low / mostly high).\nPer group: MAE of the absolute network, the two-stage core (b = 0) and FLARE, and paired differences with 2000\nsubject-bootstrap replicates. Also the fraction of draws in which a subject's branch agrees with its majority\nbranch, and the true within-subject SD by group. CalFree exploratory; AAMI used for nothing else.\n",
+ "SBP": {
+  "tau": 9.475,
+  "b": 0.2,
+  "calfree": {
+   "n": 144,
+   "FLARE": [
+    11.28,
+    [
+     10.449,
+     12.171
+    ]
+   ],
+   "core": [
+    11.304,
+    [
+     10.464,
+     12.183
+    ]
+   ],
+   "absolute": [
+    12.769,
+    [
+     11.853,
+     13.72
+    ]
+   ],
+   "FLARE_minus_absolute": [
+    -1.489,
+    [
+     -2.079,
+     -0.93
+    ]
+   ],
+   "FLARE_minus_core": [
+    -0.024,
+    [
+     -0.054,
+     0.004
+    ]
+   ],
+   "core_minus_absolute": [
+    -1.465,
+    [
+     -2.043,
+     -0.906
+    ]
+   ],
+   "mostly_low": {
+    "n": 72,
+    "true_SD_median": 11.38,
+    "branch_agreement": 0.806,
+    "absolute": [
+     13.175,
+     [
+      11.826,
+      14.524
+     ]
+    ],
+    "core": [
+     12.219,
+     [
+      10.963,
+      13.527
+     ]
+    ],
+    "FLARE": [
+     12.173,
+     [
+      10.956,
+      13.445
+     ]
+    ],
+    "FLARE_minus_absolute": [
+     -1.002,
+     [
+      -1.933,
+      -0.115
+     ]
+    ],
+    "core_minus_absolute": [
+     -0.956,
+     [
+      -1.829,
+      -0.07
+     ]
+    ],
+    "FLARE_minus_core": [
+     -0.046,
+     [
+      -0.101,
+      0.01
+     ]
+    ]
+   },
+   "mostly_high": {
+    "n": 72,
+    "true_SD_median": 15.92,
+    "branch_agreement": 0.857,
+    "absolute": [
+     12.363,
+     [
+      11.225,
+      13.653
+     ]
+    ],
+    "core": [
+     10.389,
+     [
+      9.258,
+      11.622
+     ]
+    ],
+    "FLARE": [
+     10.386,
+     [
+      9.284,
+      11.616
+     ]
+    ],
+    "FLARE_minus_absolute": [
+     -1.977,
+     [
+      -2.782,
+      -1.278
+     ]
+    ],
+    "core_minus_absolute": [
+     -1.974,
+     [
+      -2.751,
+      -1.248
+     ]
+    ],
+    "FLARE_minus_core": [
+     -0.003,
+     [
+      -0.019,
+      0.011
+     ]
+    ]
+   },
+   "n_lower_than_absolute": 100
+  },
+  "aami": {
+   "n": 108,
+   "FLARE": [
+    11.392,
+    [
+     10.441,
+     12.349
+    ]
+   ],
+   "core": [
+    11.421,
+    [
+     10.505,
+     12.362
+    ]
+   ],
+   "absolute": [
+    12.652,
+    [
+     11.66,
+     13.705
+    ]
+   ],
+   "FLARE_minus_absolute": [
+    -1.261,
+    [
+     -1.98,
+     -0.553
+    ]
+   ],
+   "FLARE_minus_core": [
+    -0.029,
+    [
+     -0.055,
+     -0.002
+    ]
+   ],
+   "core_minus_absolute": [
+    -1.232,
+    [
+     -2.008,
+     -0.512
+    ]
+   ],
+   "mostly_low": {
+    "n": 41,
+    "true_SD_median": 11.55,
+    "branch_agreement": 0.826,
+    "absolute": [
+     10.781,
+     [
+      9.447,
+      12.218
+     ]
+    ],
+    "core": [
+     10.312,
+     [
+      9.087,
+      11.677
+     ]
+    ],
+    "FLARE": [
+     10.254,
+     [
+      8.926,
+      11.632
+     ]
+    ],
+    "FLARE_minus_absolute": [
+     -0.527,
+     [
+      -1.905,
+      0.776
+     ]
+    ],
+    "core_minus_absolute": [
+     -0.469,
+     [
+      -1.86,
+      0.866
+     ]
+    ],
+    "FLARE_minus_core": [
+     -0.057,
+     [
+      -0.118,
+      0.009
+     ]
+    ]
+   },
+   "mostly_high": {
+    "n": 67,
+    "true_SD_median": 16.93,
+    "branch_agreement": 0.856,
+    "absolute": [
+     13.797,
+     [
+      12.528,
+      15.184
+     ]
+    ],
+    "core": [
+     12.099,
+     [
+      10.907,
+      13.393
+     ]
+    ],
+    "FLARE": [
+     12.088,
+     [
+      10.843,
+      13.296
+     ]
+    ],
+    "FLARE_minus_absolute": [
+     -1.71,
+     [
+      -2.52,
+      -0.86
+     ]
+    ],
+    "core_minus_absolute": [
+     -1.698,
+     [
+      -2.445,
+      -0.86
+     ]
+    ],
+    "FLARE_minus_core": [
+     -0.012,
+     [
+      -0.026,
+      0.001
+     ]
+    ]
+   },
+   "n_lower_than_absolute": 68
+  }
+ },
+ "DBP": {
+  "tau": 4.881,
+  "b": 0.15,
+  "calfree": {
+   "n": 144,
+   "FLARE": [
+    7.513,
+    [
+     6.928,
+     8.134
+    ]
+   ],
+   "core": [
+    7.531,
+    [
+     6.926,
+     8.16
+    ]
+   ],
+   "absolute": [
+    8.305,
+    [
+     7.624,
+     9.018
+    ]
+   ],
+   "FLARE_minus_absolute": [
+    -0.791,
+    [
+     -1.138,
+     -0.447
+    ]
+   ],
+   "FLARE_minus_core": [
+    -0.018,
+    [
+     -0.035,
+     -0.001
+    ]
+   ],
+   "core_minus_absolute": [
+    -0.773,
+    [
+     -1.12,
+     -0.401
+    ]
+   ],
+   "mostly_low": {
+    "n": 72,
+    "true_SD_median": 5.98,
+    "branch_agreement": 0.827,
+    "absolute": [
+     8.405,
+     [
+      7.371,
+      9.473
+     ]
+    ],
+    "core": [
+     7.734,
+     [
+      6.829,
+      8.662
+     ]
+    ],
+    "FLARE": [
+     7.697,
+     [
+      6.773,
+      8.71
+     ]
+    ],
+    "FLARE_minus_absolute": [
+     -0.708,
+     [
+      -1.314,
+      -0.138
+     ]
+    ],
+    "core_minus_absolute": [
+     -0.671,
+     [
+      -1.246,
+      -0.038
+     ]
+    ],
+    "FLARE_minus_core": [
+     -0.037,
+     [
+      -0.072,
+      -0.006
+     ]
+    ]
+   },
+   "mostly_high": {
+    "n": 72,
+    "true_SD_median": 8.37,
+    "branch_agreement": 0.846,
+    "absolute": [
+     8.204,
+     [
+      7.343,
+      9.134
+     ]
+    ],
+    "core": [
+     7.328,
+     [
+      6.565,
+      8.157
+     ]
+    ],
+    "FLARE": [
+     7.329,
+     [
+      6.581,
+      8.202
+     ]
+    ],
+    "FLARE_minus_absolute": [
+     -0.875,
+     [
+      -1.264,
+      -0.502
+     ]
+    ],
+    "core_minus_absolute": [
+     -0.876,
+     [
+      -1.262,
+      -0.472
+     ]
+    ],
+    "FLARE_minus_core": [
+     0.001,
+     [
+      -0.005,
+      0.008
+     ]
+    ]
+   },
+   "n_lower_than_absolute": 104
+  },
+  "aami": {
+   "n": 108,
+   "FLARE": [
+    7.905,
+    [
+     7.211,
+     8.677
+    ]
+   ],
+   "core": [
+    7.906,
+    [
+     7.172,
+     8.699
+    ]
+   ],
+   "absolute": [
+    8.376,
+    [
+     7.673,
+     9.12
+    ]
+   ],
+   "FLARE_minus_absolute": [
+    -0.471,
+    [
+     -0.89,
+     -0.043
+    ]
+   ],
+   "FLARE_minus_core": [
+    -0.001,
+    [
+     -0.011,
+     0.01
+    ]
+   ],
+   "core_minus_absolute": [
+    -0.47,
+    [
+     -0.878,
+     -0.05
+    ]
+   ],
+   "mostly_low": {
+    "n": 42,
+    "true_SD_median": 6.71,
+    "branch_agreement": 0.795,
+    "absolute": [
+     8.349,
+     [
+      6.934,
+      9.964
+     ]
+    ],
+    "core": [
+     7.885,
+     [
+      6.421,
+      9.524
+     ]
+    ],
+    "FLARE": [
+     7.89,
+     [
+      6.442,
+      9.516
+     ]
+    ],
+    "FLARE_minus_absolute": [
+     -0.46,
+     [
+      -1.232,
+      0.329
+     ]
+    ],
+    "core_minus_absolute": [
+     -0.464,
+     [
+      -1.235,
+      0.273
+     ]
+    ],
+    "FLARE_minus_core": [
+     0.005,
+     [
+      -0.022,
+      0.031
+     ]
+    ]
+   },
+   "mostly_high": {
+    "n": 66,
+    "true_SD_median": 9.11,
+    "branch_agreement": 0.848,
+    "absolute": [
+     8.392,
+     [
+      7.704,
+      9.077
+     ]
+    ],
+    "core": [
+     7.918,
+     [
+      7.129,
+      8.63
+     ]
+    ],
+    "FLARE": [
+     7.914,
+     [
+      7.163,
+      8.608
+     ]
+    ],
+    "FLARE_minus_absolute": [
+     -0.478,
+     [
+      -0.946,
+      -0.001
+     ]
+    ],
+    "core_minus_absolute": [
+     -0.474,
+     [
+      -0.953,
+      0.002
+     ]
+    ],
+    "FLARE_minus_core": [
+     -0.004,
+     [
+      -0.009,
+      0.001
+     ]
+    ]
+   },
+   "n_lower_than_absolute": 61
+  }
+ }
+}

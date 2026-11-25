@@ -1,0 +1,239 @@
+{
+ "protocol": "s89 (exploratory): variability-aware blending of the two-stage system and the absolute network.\n\nQuestion. The pairwise tracker helps most when within-subject pressure varies strongly and hurts on\nlow-variability records (UCI). Can a variability index computed from the unlabeled warm-up windows\ndecide, per subject, how much to trust the two-stage system versus the absolute network?\n\nProtocol (fixed before looking at test results):\n  * Warm-up: M = 20 random windows per subject, 50 draws (seed 42 + 7 d), as in s70.\n  * Two-stage prediction on scored windows: tracker + (mean level score over warm-up - mean tracker\n    output over warm-up). Absolute prediction: WS_ABS output. Single tracker WS_PAIRED (seed 42).\n  * Variability index v: standard deviation of the tracker output over the warm-up windows, per target.\n    It uses no label.\n  * Blend: y = w * two_stage + (1 - w) * absolute, with w = clip(a + b * v, 0, 1) (linear rule) or\n    w = 1[v > t] (threshold rule). a, b, t are fitted on the 194 validation subjects only, by grid\n    search on mean per-subject MAE. The level rule for validation subjects is out-of-fold (4 folds).\n  * Evaluation: CalFree (144 subjects) and UCI (records with >= 30 windows). Paired differences\n    against the two-stage system with 2000 subject-level bootstrap replicates.\nCaveat: both networks were checkpoint-selected on the validation subjects, so their validation\npredictions are not fully out-of-sample.\n",
+ "sanity_max_abs_diff_mmHg": 0.02318572998046875,
+ "n": {
+  "validation": 194,
+  "calfree": 144,
+  "uci": 4120
+ },
+ "SBP": {
+  "fitted_on_validation": {
+   "linear": {
+    "a": 0.8,
+    "b": 0.01,
+    "val_mae": 11.131890436950748
+   },
+   "threshold": {
+    "t": 0.0,
+    "val_mae": 11.16224413419619
+   }
+  },
+  "validation": {
+   "mae": {
+    "two_stage": 11.16224413419619,
+    "absolute": 13.104509301436025,
+    "linear_rule": 11.131890436950748,
+    "threshold_rule": 11.16224413419619
+   },
+   "oracle_choice_mae": 10.202409549215893,
+   "r_index_vs_true_sd": 0.6600000494192213,
+   "diff_vs_two_stage": {
+    "absolute": {
+     "mean": 1.9422651672398359,
+     "ci": [
+      1.280774464057133,
+      2.6575015573855727
+     ]
+    },
+    "linear_rule": {
+     "mean": -0.03035369724544444,
+     "ci": [
+      -0.09987365512867029,
+      0.041903468465680174
+     ]
+    },
+    "threshold_rule": {
+     "mean": 0.0,
+     "ci": [
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "mean_weight_linear": 0.9005950272677931
+  },
+  "calfree": {
+   "mae": {
+    "two_stage": 11.304048361975358,
+    "absolute": 12.768977705909496,
+    "linear_rule": 11.230452316953594,
+    "threshold_rule": 11.304048361975358
+   },
+   "oracle_choice_mae": 10.579172394649813,
+   "r_index_vs_true_sd": 0.6805857615632671,
+   "diff_vs_two_stage": {
+    "absolute": {
+     "mean": 1.4649293439341367,
+     "ci": [
+      0.9259327380686899,
+      2.067226927996602
+     ]
+    },
+    "linear_rule": {
+     "mean": -0.0735960450217647,
+     "ci": [
+      -0.14551869437341952,
+      -0.00489457529593715
+     ]
+    },
+    "threshold_rule": {
+     "mean": 0.0,
+     "ci": [
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "mean_weight_linear": 0.9015994946846644
+  },
+  "uci": {
+   "mae": {
+    "two_stage": 19.2057317148542,
+    "absolute": 17.690596479394856,
+    "linear_rule": 18.724119343384313,
+    "threshold_rule": 19.2057317148542
+   },
+   "oracle_choice_mae": 14.584753587141206,
+   "r_index_vs_true_sd": 0.2967706295022643,
+   "diff_vs_two_stage": {
+    "absolute": {
+     "mean": -1.5151352354593404,
+     "ci": [
+      -1.784680595822923,
+      -1.2323683099828364
+     ]
+    },
+    "linear_rule": {
+     "mean": -0.4816123714698875,
+     "ci": [
+      -0.5215757773631765,
+      -0.4421858442225948
+     ]
+    },
+    "threshold_rule": {
+     "mean": 0.0,
+     "ci": [
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "mean_weight_linear": 0.850597824896937
+  }
+ },
+ "DBP": {
+  "fitted_on_validation": {
+   "linear": {
+    "a": 0.7,
+    "b": 0.01,
+    "val_mae": 8.130804395532973
+   },
+   "threshold": {
+    "t": 0.0,
+    "val_mae": 8.189773892420469
+   }
+  },
+  "validation": {
+   "mae": {
+    "two_stage": 8.189773892420469,
+    "absolute": 8.728300087020207,
+    "linear_rule": 8.130804395532973,
+    "threshold_rule": 8.189773892420469
+   },
+   "oracle_choice_mae": 7.38642914540786,
+   "r_index_vs_true_sd": 0.6272119398336803,
+   "diff_vs_two_stage": {
+    "absolute": {
+     "mean": 0.5385261945997387,
+     "ci": [
+      0.14490463257380698,
+      0.9205017241785495
+     ]
+    },
+    "linear_rule": {
+     "mean": -0.05896949688749561,
+     "ci": [
+      -0.15435242223799922,
+      0.03958306125065177
+     ]
+    },
+    "threshold_rule": {
+     "mean": 0.0,
+     "ci": [
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "mean_weight_linear": 0.75174607637111
+  },
+  "calfree": {
+   "mae": {
+    "two_stage": 7.531103679188425,
+    "absolute": 8.304504811270196,
+    "linear_rule": 7.5402457627239174,
+    "threshold_rule": 7.531103679188425
+   },
+   "oracle_choice_mae": 7.013359395746887,
+   "r_index_vs_true_sd": 0.6849505207447948,
+   "diff_vs_two_stage": {
+    "absolute": {
+     "mean": 0.7734011320817699,
+     "ci": [
+      0.424422671343122,
+      1.1253830138041445
+     ]
+    },
+    "linear_rule": {
+     "mean": 0.009142083535492066,
+     "ci": [
+      -0.0891380359927837,
+      0.10096428835198247
+     ]
+    },
+    "threshold_rule": {
+     "mean": 0.0,
+     "ci": [
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "mean_weight_linear": 0.7517255390395778
+  },
+  "uci": {
+   "mae": {
+    "two_stage": 8.602669433079146,
+    "absolute": 9.263710999770586,
+    "linear_rule": 8.615187628398138,
+    "threshold_rule": 8.602669433079146
+   },
+   "oracle_choice_mae": 7.6029978074852105,
+   "r_index_vs_true_sd": 0.27035147126902753,
+   "diff_vs_two_stage": {
+    "absolute": {
+     "mean": 0.6610415666914398,
+     "ci": [
+      0.561382865448046,
+      0.7635191100462092
+     ]
+    },
+    "linear_rule": {
+     "mean": 0.0125181953189885,
+     "ci": [
+      -0.01716320849252176,
+      0.040479324533565134
+     ]
+    },
+    "threshold_rule": {
+     "mean": 0.0,
+     "ci": [
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "mean_weight_linear": 0.7265027156615369
+  }
+ }
+}

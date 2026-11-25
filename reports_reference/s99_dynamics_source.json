@@ -1,0 +1,397 @@
+{
+ "protocol": "s99: where does the preserved within-subject dynamics come from? CalFree (exploratory) and AAMI (untouched).\nModels that differ in ONE factor: training objective (absolute vs within-subject pairwise) at fixed backbone\n(ResNet seeds 42/44/45, InceptionTime, TCN). Metrics per subject: within-subject Pearson r between estimate and\nreference over all windows; SD of the estimate vs SD of the reference (r across subjects, median ratio).\nPaired differences PAIRED - ABS with subject bootstrap 2000. Encoder probe: ridge from within-subject-centred\nfrozen encoder features to within-subject-centred pressure, fitted on validation (lambda chosen on a validation\nhalf), scored on each test cohort; PAIRED vs ABS encoder (ResNet, seed 42).\n",
+ "calfree": {
+  "SBP": {
+   "ResNet seed 42": {
+    "within_r_ABS": 0.625,
+    "within_r_PAIRED": 0.757,
+    "within_r_PAIRED_minus_ABS": [
+     0.131,
+     [
+      0.112,
+      0.153
+     ]
+    ],
+    "SD_recovery_r_ABS": 0.396,
+    "SD_recovery_r_PAIRED": 0.672,
+    "amplitude_ratio_ABS": 0.64,
+    "amplitude_ratio_PAIRED": 0.77
+   },
+   "ResNet seed 44": {
+    "within_r_ABS": 0.631,
+    "within_r_PAIRED": 0.753,
+    "within_r_PAIRED_minus_ABS": [
+     0.122,
+     [
+      0.102,
+      0.143
+     ]
+    ],
+    "SD_recovery_r_ABS": 0.419,
+    "SD_recovery_r_PAIRED": 0.642,
+    "amplitude_ratio_ABS": 0.63,
+    "amplitude_ratio_PAIRED": 0.77
+   },
+   "ResNet seed 45": {
+    "within_r_ABS": 0.638,
+    "within_r_PAIRED": 0.75,
+    "within_r_PAIRED_minus_ABS": [
+     0.111,
+     [
+      0.094,
+      0.13
+     ]
+    ],
+    "SD_recovery_r_ABS": 0.468,
+    "SD_recovery_r_PAIRED": 0.634,
+    "amplitude_ratio_ABS": 0.73,
+    "amplitude_ratio_PAIRED": 0.75
+   },
+   "InceptionTime": {
+    "within_r_ABS": 0.66,
+    "within_r_PAIRED": 0.761,
+    "within_r_PAIRED_minus_ABS": [
+     0.101,
+     [
+      0.082,
+      0.12
+     ]
+    ],
+    "SD_recovery_r_ABS": 0.401,
+    "SD_recovery_r_PAIRED": 0.673,
+    "amplitude_ratio_ABS": 0.71,
+    "amplitude_ratio_PAIRED": 0.77
+   },
+   "TCN": {
+    "within_r_ABS": 0.66,
+    "within_r_PAIRED": 0.755,
+    "within_r_PAIRED_minus_ABS": [
+     0.095,
+     [
+      0.08,
+      0.111
+     ]
+    ],
+    "SD_recovery_r_ABS": 0.483,
+    "SD_recovery_r_PAIRED": 0.69,
+    "amplitude_ratio_ABS": 0.7,
+    "amplitude_ratio_PAIRED": 0.78
+   },
+   "ModernTCN (official code)": {
+    "within_r_ABS": 0.609,
+    "within_r_PAIRED": 0.67,
+    "within_r_PAIRED_minus_ABS": [
+     0.061,
+     [
+      0.039,
+      0.084
+     ]
+    ],
+    "SD_recovery_r_ABS": 0.367,
+    "SD_recovery_r_PAIRED": 0.528,
+    "amplitude_ratio_ABS": 0.5,
+    "amplitude_ratio_PAIRED": 0.67
+   }
+  },
+  "DBP": {
+   "ResNet seed 42": {
+    "within_r_ABS": 0.551,
+    "within_r_PAIRED": 0.71,
+    "within_r_PAIRED_minus_ABS": [
+     0.16,
+     [
+      0.136,
+      0.185
+     ]
+    ],
+    "SD_recovery_r_ABS": 0.514,
+    "SD_recovery_r_PAIRED": 0.678,
+    "amplitude_ratio_ABS": 0.65,
+    "amplitude_ratio_PAIRED": 0.71
+   },
+   "ResNet seed 44": {
+    "within_r_ABS": 0.551,
+    "within_r_PAIRED": 0.706,
+    "within_r_PAIRED_minus_ABS": [
+     0.154,
+     [
+      0.131,
+      0.177
+     ]
+    ],
+    "SD_recovery_r_ABS": 0.563,
+    "SD_recovery_r_PAIRED": 0.649,
+    "amplitude_ratio_ABS": 0.66,
+    "amplitude_ratio_PAIRED": 0.7
+   },
+   "ResNet seed 45": {
+    "within_r_ABS": 0.549,
+    "within_r_PAIRED": 0.703,
+    "within_r_PAIRED_minus_ABS": [
+     0.154,
+     [
+      0.129,
+      0.179
+     ]
+    ],
+    "SD_recovery_r_ABS": 0.547,
+    "SD_recovery_r_PAIRED": 0.669,
+    "amplitude_ratio_ABS": 0.74,
+    "amplitude_ratio_PAIRED": 0.7
+   },
+   "InceptionTime": {
+    "within_r_ABS": 0.6,
+    "within_r_PAIRED": 0.718,
+    "within_r_PAIRED_minus_ABS": [
+     0.118,
+     [
+      0.098,
+      0.141
+     ]
+    ],
+    "SD_recovery_r_ABS": 0.494,
+    "SD_recovery_r_PAIRED": 0.681,
+    "amplitude_ratio_ABS": 0.72,
+    "amplitude_ratio_PAIRED": 0.72
+   },
+   "TCN": {
+    "within_r_ABS": 0.589,
+    "within_r_PAIRED": 0.699,
+    "within_r_PAIRED_minus_ABS": [
+     0.11,
+     [
+      0.093,
+      0.13
+     ]
+    ],
+    "SD_recovery_r_ABS": 0.57,
+    "SD_recovery_r_PAIRED": 0.67,
+    "amplitude_ratio_ABS": 0.72,
+    "amplitude_ratio_PAIRED": 0.73
+   },
+   "ModernTCN (official code)": {
+    "within_r_ABS": 0.559,
+    "within_r_PAIRED": 0.631,
+    "within_r_PAIRED_minus_ABS": [
+     0.072,
+     [
+      0.052,
+      0.092
+     ]
+    ],
+    "SD_recovery_r_ABS": 0.535,
+    "SD_recovery_r_PAIRED": 0.572,
+    "amplitude_ratio_ABS": 0.5,
+    "amplitude_ratio_PAIRED": 0.63
+   }
+  }
+ },
+ "aami": {
+  "SBP": {
+   "ResNet seed 42": {
+    "within_r_ABS": 0.628,
+    "within_r_PAIRED": 0.746,
+    "within_r_PAIRED_minus_ABS": [
+     0.118,
+     [
+      0.094,
+      0.144
+     ]
+    ],
+    "SD_recovery_r_ABS": 0.534,
+    "SD_recovery_r_PAIRED": 0.682,
+    "amplitude_ratio_ABS": 0.62,
+    "amplitude_ratio_PAIRED": 0.78
+   },
+   "ResNet seed 44": {
+    "within_r_ABS": 0.616,
+    "within_r_PAIRED": 0.745,
+    "within_r_PAIRED_minus_ABS": [
+     0.13,
+     [
+      0.101,
+      0.162
+     ]
+    ],
+    "SD_recovery_r_ABS": 0.539,
+    "SD_recovery_r_PAIRED": 0.661,
+    "amplitude_ratio_ABS": 0.6,
+    "amplitude_ratio_PAIRED": 0.76
+   },
+   "ResNet seed 45": {
+    "within_r_ABS": 0.622,
+    "within_r_PAIRED": 0.741,
+    "within_r_PAIRED_minus_ABS": [
+     0.119,
+     [
+      0.09,
+      0.149
+     ]
+    ],
+    "SD_recovery_r_ABS": 0.506,
+    "SD_recovery_r_PAIRED": 0.672,
+    "amplitude_ratio_ABS": 0.69,
+    "amplitude_ratio_PAIRED": 0.75
+   },
+   "InceptionTime": {
+    "within_r_ABS": 0.658,
+    "within_r_PAIRED": 0.751,
+    "within_r_PAIRED_minus_ABS": [
+     0.092,
+     [
+      0.07,
+      0.116
+     ]
+    ],
+    "SD_recovery_r_ABS": 0.493,
+    "SD_recovery_r_PAIRED": 0.673,
+    "amplitude_ratio_ABS": 0.7,
+    "amplitude_ratio_PAIRED": 0.76
+   },
+   "TCN": {
+    "within_r_ABS": 0.642,
+    "within_r_PAIRED": 0.754,
+    "within_r_PAIRED_minus_ABS": [
+     0.112,
+     [
+      0.089,
+      0.134
+     ]
+    ],
+    "SD_recovery_r_ABS": 0.544,
+    "SD_recovery_r_PAIRED": 0.678,
+    "amplitude_ratio_ABS": 0.65,
+    "amplitude_ratio_PAIRED": 0.79
+   },
+   "ModernTCN (official code)": {
+    "within_r_ABS": 0.611,
+    "within_r_PAIRED": 0.677,
+    "within_r_PAIRED_minus_ABS": [
+     0.066,
+     [
+      0.042,
+      0.091
+     ]
+    ],
+    "SD_recovery_r_ABS": 0.412,
+    "SD_recovery_r_PAIRED": 0.498,
+    "amplitude_ratio_ABS": 0.47,
+    "amplitude_ratio_PAIRED": 0.7
+   }
+  },
+  "DBP": {
+   "ResNet seed 42": {
+    "within_r_ABS": 0.578,
+    "within_r_PAIRED": 0.708,
+    "within_r_PAIRED_minus_ABS": [
+     0.13,
+     [
+      0.104,
+      0.159
+     ]
+    ],
+    "SD_recovery_r_ABS": 0.527,
+    "SD_recovery_r_PAIRED": 0.59,
+    "amplitude_ratio_ABS": 0.61,
+    "amplitude_ratio_PAIRED": 0.71
+   },
+   "ResNet seed 44": {
+    "within_r_ABS": 0.566,
+    "within_r_PAIRED": 0.704,
+    "within_r_PAIRED_minus_ABS": [
+     0.139,
+     [
+      0.11,
+      0.169
+     ]
+    ],
+    "SD_recovery_r_ABS": 0.526,
+    "SD_recovery_r_PAIRED": 0.588,
+    "amplitude_ratio_ABS": 0.61,
+    "amplitude_ratio_PAIRED": 0.69
+   },
+   "ResNet seed 45": {
+    "within_r_ABS": 0.572,
+    "within_r_PAIRED": 0.701,
+    "within_r_PAIRED_minus_ABS": [
+     0.129,
+     [
+      0.098,
+      0.161
+     ]
+    ],
+    "SD_recovery_r_ABS": 0.514,
+    "SD_recovery_r_PAIRED": 0.611,
+    "amplitude_ratio_ABS": 0.68,
+    "amplitude_ratio_PAIRED": 0.7
+   },
+   "InceptionTime": {
+    "within_r_ABS": 0.608,
+    "within_r_PAIRED": 0.71,
+    "within_r_PAIRED_minus_ABS": [
+     0.101,
+     [
+      0.077,
+      0.128
+     ]
+    ],
+    "SD_recovery_r_ABS": 0.484,
+    "SD_recovery_r_PAIRED": 0.585,
+    "amplitude_ratio_ABS": 0.64,
+    "amplitude_ratio_PAIRED": 0.7
+   },
+   "TCN": {
+    "within_r_ABS": 0.607,
+    "within_r_PAIRED": 0.699,
+    "within_r_PAIRED_minus_ABS": [
+     0.093,
+     [
+      0.07,
+      0.116
+     ]
+    ],
+    "SD_recovery_r_ABS": 0.553,
+    "SD_recovery_r_PAIRED": 0.601,
+    "amplitude_ratio_ABS": 0.64,
+    "amplitude_ratio_PAIRED": 0.73
+   },
+   "ModernTCN (official code)": {
+    "within_r_ABS": 0.579,
+    "within_r_PAIRED": 0.625,
+    "within_r_PAIRED_minus_ABS": [
+     0.046,
+     [
+      0.023,
+      0.07
+     ]
+    ],
+    "SD_recovery_r_ABS": 0.43,
+    "SD_recovery_r_PAIRED": 0.509,
+    "amplitude_ratio_ABS": 0.5,
+    "amplitude_ratio_PAIRED": 0.62
+   }
+  }
+ },
+ "encoder_probe_within_r": {
+  "WS_ABS": {
+   "SBP": {
+    "calfree": 0.66,
+    "aami": 0.656
+   },
+   "DBP": {
+    "calfree": 0.596,
+    "aami": 0.611
+   }
+  },
+  "WS_PAIRED": {
+   "SBP": {
+    "calfree": 0.753,
+    "aami": 0.746
+   },
+   "DBP": {
+    "calfree": 0.708,
+    "aami": 0.717
+   }
+  }
+ }
+}

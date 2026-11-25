@@ -1,0 +1,27 @@
+{
+  "analysis_id": "s71_two_stage_bland_altman",
+  "warmup_windows": 20,
+  "sampled_points_per_target": 60000,
+  "summary": {
+    "SBP": {
+      "n_points": 2736000,
+      "mean_error": -1.0445269226145713,
+      "sd": 14.427896490691134,
+      "loa": [
+        -29.323204044369195,
+        27.23415019914005
+      ],
+      "error_on_reference_slope": -0.5986648502554185
+    },
+    "DBP": {
+      "n_points": 2736000,
+      "mean_error": 0.1438700877624823,
+      "sd": 9.51699294916271,
+      "loa": [
+        -18.509436092596427,
+        18.797176268121394
+      ],
+      "error_on_reference_slope": -0.6637358251263551
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "analysis_id": "s77_true_level_single_tracker",
+  "created_utc": "2026-10-01T15:34:14.175748+00:00",
+  "warmup_windows": 20,
+  "draws": 50,
+  "results": {
+    "ENSEMBLE": {
+      "SBP": 6.974490988806166,
+      "DBP": 4.013792845273107
+    },
+    "WS_PAIRED": {
+      "SBP": 7.162727801171993,
+      "DBP": 4.088336753554268
+    }
+  }
+}

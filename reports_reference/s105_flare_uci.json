@@ -1,0 +1,511 @@
+{
+ "protocol": "s105: FLARE (gated) on the UCI records, frozen from VitalDB, same protocol as s69 (all four parts, records with at\nleast 30 windows, warm-up M in {5, 10, 20} windows, 50 draws, seed 42 + 7d, record bootstrap 2000).\nStage-1 level: the s69 rule (ridge on frozen RAW_w encoder features, validation subjects with >= 20 windows).\nGate: fluctuation index v = SD of the pairwise tracker over the warm-up; threshold tau, ECG weight b and the mean ECG\nlevel are fitted on the VitalDB validation subjects for the same M with the s93/s104 rules; the ECG level is the\nVitalDB-training ridge on the eight hand-crafted features (median over the warm-up windows). Nothing is refitted on\nUCI. Reports: absolute network, two-stage core (b = 0), FLARE, paired differences; by majority branch.\n",
+ "SBP": {
+  "M5": {
+   "n_records": 4120,
+   "tau": 7.889,
+   "b": 0.1,
+   "fraction_low": 0.9,
+   "absolute": [
+    17.695,
+    [
+     17.346,
+     18.05
+    ]
+   ],
+   "core": [
+    19.278,
+    [
+     18.86,
+     19.701
+    ]
+   ],
+   "FLARE": [
+    19.3,
+    [
+     18.87,
+     19.702
+    ]
+   ],
+   "FLARE_minus_absolute": [
+    1.605,
+    [
+     1.333,
+     1.89
+    ]
+   ],
+   "core_minus_absolute": [
+    1.583,
+    [
+     1.303,
+     1.863
+    ]
+   ],
+   "FLARE_minus_core": [
+    0.022,
+    [
+     0.017,
+     0.027
+    ]
+   ],
+   "mostly_low": {
+    "n": 3883,
+    "true_SD_median": 3.75,
+    "FLARE_minus_absolute": [
+     1.259,
+     [
+      0.962,
+      1.55
+     ]
+    ],
+    "FLARE_minus_core": [
+     0.022,
+     [
+      0.017,
+      0.026
+     ]
+    ]
+   },
+   "mostly_high": {
+    "n": 237,
+    "true_SD_median": 6.01,
+    "FLARE_minus_absolute": [
+     7.276,
+     [
+      6.206,
+      8.354
+     ]
+    ],
+    "FLARE_minus_core": [
+     0.03,
+     [
+      0.023,
+      0.036
+     ]
+    ]
+   }
+  },
+  "M10": {
+   "n_records": 4120,
+   "tau": 8.989,
+   "b": 0.15,
+   "fraction_low": 0.928,
+   "absolute": [
+    17.694,
+    [
+     17.346,
+     18.035
+    ]
+   ],
+   "core": [
+    19.228,
+    [
+     18.806,
+     19.644
+    ]
+   ],
+   "FLARE": [
+    19.265,
+    [
+     18.864,
+     19.705
+    ]
+   ],
+   "FLARE_minus_absolute": [
+    1.571,
+    [
+     1.305,
+     1.839
+    ]
+   ],
+   "core_minus_absolute": [
+    1.534,
+    [
+     1.244,
+     1.819
+    ]
+   ],
+   "FLARE_minus_core": [
+    0.036,
+    [
+     0.029,
+     0.043
+    ]
+   ],
+   "mostly_low": {
+    "n": 3892,
+    "true_SD_median": 3.76,
+    "FLARE_minus_absolute": [
+     1.203,
+     [
+      0.891,
+      1.491
+     ]
+    ],
+    "FLARE_minus_core": [
+     0.036,
+     [
+      0.029,
+      0.045
+     ]
+    ]
+   },
+   "mostly_high": {
+    "n": 228,
+    "true_SD_median": 5.64,
+    "FLARE_minus_absolute": [
+     7.852,
+     [
+      6.739,
+      8.938
+     ]
+    ],
+    "FLARE_minus_core": [
+     0.033,
+     [
+      0.023,
+      0.044
+     ]
+    ]
+   }
+  },
+  "M20": {
+   "n_records": 4120,
+   "tau": 9.475,
+   "b": 0.2,
+   "fraction_low": 0.941,
+   "absolute": [
+    17.691,
+    [
+     17.324,
+     18.048
+    ]
+   ],
+   "core": [
+    19.206,
+    [
+     18.775,
+     19.628
+    ]
+   ],
+   "FLARE": [
+    19.259,
+    [
+     18.854,
+     19.686
+    ]
+   ],
+   "FLARE_minus_absolute": [
+    1.568,
+    [
+     1.28,
+     1.857
+    ]
+   ],
+   "core_minus_absolute": [
+    1.515,
+    [
+     1.222,
+     1.779
+    ]
+   ],
+   "FLARE_minus_core": [
+    0.053,
+    [
+     0.042,
+     0.064
+    ]
+   ],
+   "mostly_low": {
+    "n": 3895,
+    "true_SD_median": 3.76,
+    "FLARE_minus_absolute": [
+     1.209,
+     [
+      0.903,
+      1.496
+     ]
+    ],
+    "FLARE_minus_core": [
+     0.054,
+     [
+      0.043,
+      0.065
+     ]
+    ]
+   },
+   "mostly_high": {
+    "n": 225,
+    "true_SD_median": 5.57,
+    "FLARE_minus_absolute": [
+     7.781,
+     [
+      6.671,
+      8.933
+     ]
+    ],
+    "FLARE_minus_core": [
+     0.039,
+     [
+      0.028,
+      0.051
+     ]
+    ]
+   }
+  }
+ },
+ "DBP": {
+  "M5": {
+   "n_records": 4120,
+   "tau": 4.042,
+   "b": 0.3,
+   "fraction_low": 0.892,
+   "absolute": [
+    9.264,
+    [
+     9.074,
+     9.449
+    ]
+   ],
+   "core": [
+    8.655,
+    [
+     8.47,
+     8.851
+    ]
+   ],
+   "FLARE": [
+    8.672,
+    [
+     8.478,
+     8.862
+    ]
+   ],
+   "FLARE_minus_absolute": [
+    -0.592,
+    [
+     -0.691,
+     -0.493
+    ]
+   ],
+   "core_minus_absolute": [
+    -0.609,
+    [
+     -0.712,
+     -0.502
+    ]
+   ],
+   "FLARE_minus_core": [
+    0.017,
+    [
+     0.011,
+     0.023
+    ]
+   ],
+   "mostly_low": {
+    "n": 3851,
+    "true_SD_median": 1.92,
+    "FLARE_minus_absolute": [
+     -0.712,
+     [
+      -0.813,
+      -0.613
+     ]
+    ],
+    "FLARE_minus_core": [
+     0.019,
+     [
+      0.013,
+      0.025
+     ]
+    ]
+   },
+   "mostly_high": {
+    "n": 269,
+    "true_SD_median": 3.39,
+    "FLARE_minus_absolute": [
+     1.128,
+     [
+      0.675,
+      1.576
+     ]
+    ],
+    "FLARE_minus_core": [
+     -0.015,
+     [
+      -0.021,
+      -0.009
+     ]
+    ]
+   }
+  },
+  "M10": {
+   "n_records": 4120,
+   "tau": 4.609,
+   "b": 0.3,
+   "fraction_low": 0.92,
+   "absolute": [
+    9.263,
+    [
+     9.07,
+     9.457
+    ]
+   ],
+   "core": [
+    8.621,
+    [
+     8.446,
+     8.813
+    ]
+   ],
+   "FLARE": [
+    8.637,
+    [
+     8.446,
+     8.83
+    ]
+   ],
+   "FLARE_minus_absolute": [
+    -0.626,
+    [
+     -0.728,
+     -0.521
+    ]
+   ],
+   "core_minus_absolute": [
+    -0.642,
+    [
+     -0.746,
+     -0.542
+    ]
+   ],
+   "FLARE_minus_core": [
+    0.016,
+    [
+     0.011,
+     0.022
+    ]
+   ],
+   "mostly_low": {
+    "n": 3857,
+    "true_SD_median": 1.93,
+    "FLARE_minus_absolute": [
+     -0.746,
+     [
+      -0.85,
+      -0.64
+     ]
+    ],
+    "FLARE_minus_core": [
+     0.018,
+     [
+      0.012,
+      0.024
+     ]
+    ]
+   },
+   "mostly_high": {
+    "n": 263,
+    "true_SD_median": 3.3,
+    "FLARE_minus_absolute": [
+     1.135,
+     [
+      0.678,
+      1.578
+     ]
+    ],
+    "FLARE_minus_core": [
+     -0.01,
+     [
+      -0.016,
+      -0.005
+     ]
+    ]
+   }
+  },
+  "M20": {
+   "n_records": 4120,
+   "tau": 4.881,
+   "b": 0.15,
+   "fraction_low": 0.934,
+   "absolute": [
+    9.264,
+    [
+     9.076,
+     9.454
+    ]
+   ],
+   "core": [
+    8.603,
+    [
+     8.409,
+     8.793
+    ]
+   ],
+   "FLARE": [
+    8.61,
+    [
+     8.42,
+     8.797
+    ]
+   ],
+   "FLARE_minus_absolute": [
+    -0.654,
+    [
+     -0.756,
+     -0.553
+    ]
+   ],
+   "core_minus_absolute": [
+    -0.661,
+    [
+     -0.761,
+     -0.563
+    ]
+   ],
+   "FLARE_minus_core": [
+    0.007,
+    [
+     0.004,
+     0.01
+    ]
+   ],
+   "mostly_low": {
+    "n": 3856,
+    "true_SD_median": 1.93,
+    "FLARE_minus_absolute": [
+     -0.781,
+     [
+      -0.886,
+      -0.682
+     ]
+    ],
+    "FLARE_minus_core": [
+     0.008,
+     [
+      0.005,
+      0.011
+     ]
+    ]
+   },
+   "mostly_high": {
+    "n": 264,
+    "true_SD_median": 3.31,
+    "FLARE_minus_absolute": [
+     1.205,
+     [
+      0.761,
+      1.639
+     ]
+    ],
+    "FLARE_minus_core": [
+     -0.004,
+     [
+      -0.006,
+      -0.002
+     ]
+    ]
+   }
+  }
+ }
+}

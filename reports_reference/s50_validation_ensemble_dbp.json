@@ -1,0 +1,28 @@
+{
+  "analysis_id": "s50_validation_ensemble",
+  "criterion": "dbp",
+  "results": {
+    "members": [
+      "BW_RESNET",
+      "BW_INCEPTION",
+      "RAW_s43w",
+      "BW_TCN",
+      "BALANCED"
+    ],
+    "single_best_on_validation": "BW_RESNET",
+    "best single, chosen on validation": {
+      "SBP": 12.599575313197242,
+      "DBP": 8.424679948555099
+    },
+    "validation-selected ensemble": {
+      "SBP": 12.080030598269568,
+      "DBP": 8.154516602754592
+    },
+    "pool_spread": {
+      "min": 12.414684267573886,
+      "max": 13.338221053149965,
+      "range": 0.9235367855760792,
+      "n": 21
+    }
+  }
+}
